@@ -5,9 +5,9 @@ function reverseArray(numbers) {
     return null;
   }
   rev = [];
-  numbers.forEach((element) => {
-    rev.unshift(element);
-  });
+  for (let i = numbers.length - 1; i >= 0; i--) {
+    rev.push(numbers[i]);
+  }
   return rev;
 }
 
