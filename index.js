@@ -1,17 +1,4 @@
-// const numbers = [5, 6, 8, 11, 9, 4];
-
-// function reverseArray(arr) {
-//   if (!Array.isArray(arr)) {
-//     return null;
-//   }
-//   return arr.reverse();
-// }
-
-// console.log(reverseArray(numbers));
-
-//клон массива===========================
-
-const numbers = [5, 6, 8, 11, 9, 4];
+const arr = [5, 6, 8, 11, 9, 4];
 
 function cloneArr(arr) {
   if (!Array.isArray(arr)) {
@@ -20,4 +7,3 @@ function cloneArr(arr) {
 
   return (newArray = arr.slice());
 }
-console.log(cloneArr(numbers));
