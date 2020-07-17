@@ -1,4 +1,4 @@
-const num = [5, 6, 8, 11, 9, 4];
+// const num = [5, 6, 8, 11, 9, 4];
 
 function cloneArr(arr) {
   if (!Array.isArray(arr)) {
@@ -6,4 +6,3 @@ function cloneArr(arr) {
   }
   return (newArray = [...arr]);
 }
-console.log(cloneArr(num));
