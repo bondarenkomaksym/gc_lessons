@@ -1,15 +1,17 @@
+//перевернуть массив===========================
+
 const numbers = [5, 6, 8, 11, 9, 4];
 
-function reverseArray(numbers) {
-  if (!Array.isArray(numbers)) {
+function reverseArray(arr) {
+  if (!Array.isArray(arr)) {
     return null;
   }
-  rev = [];
-  for (let i = numbers.length - 1; i >= 0; i--) {
-    rev.push(numbers[i]);
-  }
-  return rev;
+  return arr.reverse();
 }
+
+// const array = reverseArray(numbers);
+console.log(numbers);
+console.log(reverseArray(numbers));
 
 //клон массива===========================
 
