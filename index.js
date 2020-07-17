@@ -2,5 +2,6 @@ function reverseArray(arr) {
   if (!Array.isArray(arr)) {
     return null;
   }
-  return arr.reverse();
+  let newArray = arr.slice();
+  return newArray.reverse();
 }
