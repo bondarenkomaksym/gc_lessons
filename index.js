@@ -1,16 +1,19 @@
-function sortAsc(arr) {
-  if (!Array.isArray(arr)) {
+const nums = [1, 4, 20, 12, 5];
+
+function sortAsc(array) {
+  if (!Array.isArray(array)) {
     return null;
   }
-  for (let n = 0; n < arr.length; n++) {
-    for (let i = 0; i < arr.length - 1; i++) {
-      if (arr[i] > arr[i + 1]) {
-        const buff = arr[i];
-        arr[i] = arr[i + 1];
-        arr[i + 1] = buff;
+  for (let n = 0; n < array.length; n++) {
+    for (let i = 0; i < array.length - 1; i++) {
+      if (array[i] > array[i + 1]) {
+        const buff = array[i];
+        array[i] = array[i + 1];
+        array[i + 1] = buff;
       }
     }
   }
 
-  return arr;
+  return array;
 }
+console.log(sortAsc(nums));
