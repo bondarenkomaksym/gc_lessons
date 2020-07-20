@@ -2,30 +2,22 @@
   box-sizing: border-box;
 }
 html {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-}
-section {
-  margin: 32px;
+  font-family: Verdana, sans-serif;
 }
 h1 {
-  word-spacing: 20px;
+  font-size: 74px;
+  white-space: nowrap;
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 50%;
+  margin: auto;
+}
+div {
+  height: 200px;
+  background-color: coral;
+  color: white;
   text-transform: uppercase;
-}
-p {
-  line-height: 28px;
-}
-.tech {
-  font-weight: 900;
-  letter-spacing: 3px;
-  font-size: 24px;
-  opacity: 0.8;
-  text-decoration: underline;
-}
-.trans {
-  color: grey;
-}
-a {
-  text-decoration: none;
+  text-align: center;
+  line-height: 200px;
 }
