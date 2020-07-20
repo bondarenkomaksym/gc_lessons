@@ -1,14 +1,31 @@
 * {
   box-sizing: border-box;
 }
-body {
-  overflow: hidden;
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
 }
-.gallery {
-  display: flex;
-  overflow-x: scroll;
-  cursor: all-scroll;
+section {
+  margin: 32px;
 }
-.thumb {
-  margin: 8px;
+h1 {
+  word-spacing: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+p {
+  line-height: 28px;
+}
+.tech {
+  font-weight: 900;
+  letter-spacing: 3px;
+  font-size: 24px;
+  opacity: 0.8;
+  text-decoration: underline;
+}
+.trans {
+  color: grey;
+}
+a {
+  text-decoration: none;
 }
