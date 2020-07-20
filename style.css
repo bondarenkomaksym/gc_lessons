@@ -9,6 +9,7 @@
   background-color: darkgreen;
   cursor: pointer;
   opacity: 0.8;
+  color: white;
 }
 .dropdown:hover {
   font-size: 16px;
