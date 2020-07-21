@@ -1,15 +1,15 @@
 * {
   box-sizing: border-box;
 }
-/* .gallery {
+.gallery {
   display: flex;
-} */
+}
 
 .image {
-  float: left;
   width: 200px;
   height: 200px;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  background-clip: content-box;
 }
