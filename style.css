@@ -1,10 +1,29 @@
-/* * {
+* {
   box-sizing: border-box;
-} */
-div {
-  background-color: blueviolet !important;
 }
-.text::first-letter {
-  color: green !important;
-  font-size: 24px;
+.image-container {
+  margin: 50px auto;
+  display: block;
+  max-width: 100%;
+  border-radius: 20px;
+}
+.gallery {
+  display: flex;
+}
+.card {
+  margin: 16px;
+  box-shadow: 0px 7px 18px -8px rgba(0,0,0,0.75);
+}
+.opfil {
+  filter: opacity(50%);
+}
+.blurfil {
+  filter: blur(4px);
+}
+.invertfil {
+  filter: invert(100%);
+}
+.caption {
+  line-height: 30px;
+  text-align: center;
 }
