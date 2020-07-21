@@ -1,13 +1,17 @@
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 html {
   font-size: 18px;
 }
-ul > li {
+.properties-list__item {
+
+  padding: 8px;
+  
+}
+.properties-list {
   color: #f39;
   font-size: 24px;
   line-height: 32px;
-  padding: 8px;
   list-style: none;
 }
