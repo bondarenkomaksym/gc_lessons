@@ -8,7 +8,7 @@ body {
 }
 .page {
   position: absolute;
-  top: calc(50% - 171px);
+  top: calc(50% - 172px);
   left: calc(50% - 150px);
 }
 .login-form {
@@ -24,7 +24,7 @@ body {
   text-align: center;
 }
 .form-control {
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 .form-input {
   margin-top: 4px;
