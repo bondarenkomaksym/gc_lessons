@@ -6,10 +6,14 @@ body {
   font-size: 16px;
   font-family: monospace;
 }
+.page {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
 .login-form {
-  position: absolute;
-  top: calc(50% - 172px);
-  left: calc(50% - 150px);
+  /* margin: auto; */
   padding: 16px;
   background-color: aqua;
   width: 300px;
