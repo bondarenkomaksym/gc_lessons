@@ -8,7 +8,7 @@ body {
 }
 .page {
   position: absolute;
-  top: calc(50% - 172px);
+  top: calc(50% - 171px);
   left: calc(50% - 150px);
 }
 .login-form {
