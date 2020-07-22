@@ -21,8 +21,9 @@ select {
   margin-bottom: 8px;
 }
 input[type="radio"] {
-  margin: 0;
+  /* margin: 0; */
 }
 .languages {
-  margin: 0 0 8px 0;
+  /* margin-left: 8px; */
+  margin-bottom: 8px;
 }
