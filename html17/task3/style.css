@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+table {
+  margin: 16px;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+td {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+td:last-of-type {
+  background-color: rgb(255, 255, 255) !important;
+  border: none;
+}
+td:first-of-type {
+  background-color: rgb(255, 255, 255) !important;
+  border: none;
+}
+table tr:nth-child(odd) td:nth-child(even) {
+  background: #000;
+}
+table tr:nth-child(even) td:nth-child(odd) {
+  background: #000;
+}
+.empty-white {
+  background-color: white !important;
+}
+.string td {
+  border: none;
+}
