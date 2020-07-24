@@ -25,7 +25,7 @@
 .spinner-text {
   font-size: 16px;
   text-transform: uppercase;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Courier New", Courier, monospace;
   animation: blinking 2s infinite linear;
 }
 @keyframes blinking {
