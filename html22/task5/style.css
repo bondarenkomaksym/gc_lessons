@@ -94,7 +94,6 @@ img {
   .main {
     display: flex;
     flex-direction: column;
-    /* height: 100vh; */
   }
   .nav-section {
     display: flex;
@@ -111,7 +110,7 @@ img {
     width: 100%;
   }
 }
-/* @media screen and (min-width: 900px) {
+@media screen and (min-width: 900px) {
   body {
     display: flex;
     height: 100vh;
@@ -129,4 +128,4 @@ img {
   .news {
     width: 20%;
   }
-} */
+}
