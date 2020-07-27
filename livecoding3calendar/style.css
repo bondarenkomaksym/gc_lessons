@@ -79,33 +79,98 @@ button {
 }
 .calendar__week {
   display: flex;
-  position: relative;
+
   flex-grow: 1;
 }
 .calendar__day {
   flex: 1;
-  border-left: 1px solid rgb(0, 0, 0);
+  border-left: 1px solid #eee;
 }
 .calendar__hour {
   height: 60px;
-  border-bottom: 1px solid rgb(0, 0, 0);
+  border-bottom: 1px solid #eee;
 }
-.blue_block {
-  position: absolute;
+.event {
+  position: relative;
+  top: 30px;
+  height: 100px;
   padding: 8px 0 20px 10px;
-  top: 200px;
   background-color: #c6dafc;
   border-radius: 5px;
-  width: calc(100% / 7);
-  /* height: calc(100vh / 12); */
+  width: 90%;
 }
-.blue_block__event,
-.blue_block__time {
+.event__title,
+.event__time {
   display: block;
   margin: 2px;
   font-size: 15px;
   color: #6f7a8d;
 }
-.blue_block__event {
+.event__title {
   font-weight: 500;
+}
+.modal {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+}
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(206, 201, 201, 0.911);
+
+  z-index: 10;
+}
+.hidden {
+  display: none;
+}
+.modal__content {
+  background-color: #fff;
+  padding: 20px;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+}
+.create-event {
+  display: flex;
+  flex-direction: column;
+}
+.create-event__close-btn {
+  font-size: 30px;
+  width: 24px;
+  height: 24px;
+  /*+++++++++++*/
+  margin-left: auto;
+  transform: rotate(45deg);
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+input,
+textarea {
+  border: none;
+}
+.create-event-form__field {
+  width: 100%;
+  border: none;
+}
+textarea {
+  height: 100px;
+  resize: none;
+}
+.create-event-form__time {
+  margin: 50px 0;
+}
+.create-event-form__submit-btn {
+  margin-top: 15px;
+  float: right;
+  width: 120px;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  background-color: cornflowerblue;
+  border-radius: 8px;
 }
