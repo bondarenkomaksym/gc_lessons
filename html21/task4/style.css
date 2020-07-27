@@ -10,7 +10,7 @@ body {
   display: flex;
   height: 100vh;
   flex-direction: column;
-  flex-wrap: nowrap;
+  /* flex-wrap: nowrap; */
   justify-content: space-between;
 }
 .header {
@@ -20,6 +20,7 @@ body {
 }
 .main {
   display: flex;
+  height: 100%;
 }
 .navigation {
   width: 20%;
