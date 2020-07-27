@@ -33,6 +33,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding: 0 0.5em 0 0.5em;
   margin-bottom: 0.5em;
   line-height: 2em;
   color: white;
@@ -41,7 +42,7 @@ body {
 .nav-list-link {
   width: 100%;
   text-decoration: none;
-  padding: 0 0.5em 0 0.5em;
+
   color: white;
 }
 .section {
