@@ -79,7 +79,6 @@ button {
 }
 .calendar__week {
   display: flex;
-
   flex-grow: 1;
 }
 .calendar__day {
@@ -121,7 +120,6 @@ button {
   top: 0;
   left: 0;
   background-color: rgba(206, 201, 201, 0.911);
-
   z-index: 10;
 }
 .hidden {
