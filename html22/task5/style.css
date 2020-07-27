@@ -122,10 +122,16 @@ img {
     flex-direction: row;
     height: 100%;
   }
-  .nav-section {
+  /* .nav-section {
     width: 80%;
+  } */
+  .navigation {
+    width: 20vw;
+  }
+  .section {
+    width: 60vw;
   }
   .news {
-    width: 20%;
+    width: 20vw;
   }
 }
