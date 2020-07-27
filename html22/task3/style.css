@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+main {
+  display: flex;
+}
+picture {
+  margin: auto;
+}
+img {
+  max-width: 100%;
+}
+/* @media screen and (min-width: 600px) {
+  .products {
+    display: flex;
+    flex: 2;
+  }
+}
+@media screen and (min-width: 900px) {
+  .content {
+    display: flex;
+  }
+} */
