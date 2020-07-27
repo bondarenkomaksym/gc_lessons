@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  color: #555;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+  display: flex;
+  /* height: 100vh; */
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header {
+  background: linear-gradient(60deg, red, orange);
+  text-align: center;
+  color: white;
+}
+.main {
+  display: flex;
+  height: 100%;
+}
+img {
+  max-width: 100%;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.navigation {
+  width: 20%;
+}
+.nav-list {
+  padding: 0;
+  list-style: none;
+}
+.nav-list-item {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 0.5em 0 0.5em;
+  margin-bottom: 0.5em;
+  line-height: 2em;
+  color: white;
+  background-color: #808080;
+}
+.nav-list-link {
+  width: 100%;
+  text-decoration: none;
+
+  color: white;
+}
+.section {
+  width: 60%;
+  font-size: 1.25em;
+}
+.section__header {
+  font-size: 5vw;
+  text-align: center;
+}
+.units-list {
+  line-height: 1.75em;
+}
+.css-units {
+  font-size: 1.125em;
+  font-weight: 700;
+  color: #8b0000;
+  background-color: #e5e5e5;
+}
+.news {
+  width: 20%;
+}
+.navigation,
+.section,
+.news {
+  padding: 0.5em;
+}
+.footer {
+  margin-bottom: 0;
+  text-align: center;
+  background-color: #e5e5e5;
+  padding: 0.5em;
+}
+@media screen and (max-width: 600px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+  .navigation,
+  .section,
+  .news {
+    width: 100%;
+  }
+}
+/* @media screen and (min-width: 601px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .nav-section {
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+  }
+  .navigation {
+    width: 20%;
+  }
+  .section {
+    width: 80%;
+  }
+  .news {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 900px) {
+  body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .main {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  .nav-section {
+    width: 80%;
+  }
+  .news {
+    width: 20%;
+  }
+} */
