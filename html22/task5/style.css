@@ -8,7 +8,6 @@ html {
 }
 body {
   display: flex;
-  /* height: 100vh; */
   flex-direction: column;
   justify-content: space-between;
 }
@@ -122,9 +121,6 @@ img {
     flex-direction: row;
     height: 100%;
   }
-  /* .nav-section {
-    width: 80%;
-  } */
   .navigation {
     width: 20vw;
   }
