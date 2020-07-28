@@ -1,0 +1,60 @@
+.card {
+  display: flex;
+  min-width: 380px;
+  height: 770px;
+  margin: 9px;
+  background-color: #334247;
+}
+
+.main-text {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 33px;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.price-card__title {
+  font-size: 35px;
+  line-height: 43px;
+  font-weight: 700;
+}
+
+.price-card__website {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.rect_green {
+  display: flex;
+  margin-top: 33px;
+  width: 380px;
+  height: 105px;
+  background-color: #5bb189;
+}
+
+.euro-price {
+  margin: auto;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 67px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  background-color: #141b1c;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */
