@@ -1,0 +1,14 @@
+.header {
+  height: 56px;
+  background-color: #eee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */
