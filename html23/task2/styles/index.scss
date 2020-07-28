@@ -10,7 +10,10 @@ body {
   height: 100vh;
 }
 .container {
-  // display: flex;
+  display: flex;
+  @include vertical {
+    flex-direction: column;
+  }
 }
 .square {
   width: 100px;
