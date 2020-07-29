@@ -85,7 +85,7 @@ html {
   background-color: #141b1c;
 }
 
-.container {
+body {
   display: flex;
   height: 100vh;
   justify-content: center;
