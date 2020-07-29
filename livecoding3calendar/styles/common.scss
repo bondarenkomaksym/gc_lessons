@@ -1,0 +1,31 @@
+button {
+  height: 40px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.modal {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+  }
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(206, 201, 201, 0.911);
+  z-index: 10;
+}
+.hidden {
+  display: none;
+}

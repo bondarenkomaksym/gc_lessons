@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  height: 80px;
+  padding: 20px 40px;
+  align-items: center;
+}
+.create-event-btn {
+  padding: 0 10px;
+  margin-right: 20px;
+}
+
+.navigation {
+  &__today-btn {
+    margin-left: 20px;
+    padding: 5px 15px;
+  }
+  &__icon-btn {
+    margin-left: 20px;
+    background: transparent;
+    border: none;
+  }
+}

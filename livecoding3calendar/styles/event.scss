@@ -1,0 +1,21 @@
+.event {
+  position: relative;
+  top: 30px;
+  height: 100px;
+  padding: 8px 0 20px 10px;
+  background-color: #c6dafc;
+  border-radius: 5px;
+  width: 90%;
+
+  &__title {
+    font-weight: 500;
+  }
+
+  &__title,
+  &__time {
+    display: block;
+    margin: 2px;
+    font-size: 15px;
+    color: #6f7a8d;
+  }
+}

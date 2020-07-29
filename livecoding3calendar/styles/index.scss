@@ -1,0 +1,14 @@
+@import "./header.scss";
+@import "./calendar.scss";
+@import "./common.scss";
+@import "./create-event.scss";
+@import "./variables.scss";
+@import "./event.scss";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}

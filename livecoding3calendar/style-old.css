@@ -1,4 +1,4 @@
-* {
+/* * {
   box-sizing: border-box;
 }
 body {
@@ -16,8 +16,8 @@ button {
   border: 1px solid grey;
   border-radius: 10px;
   cursor: pointer;
-}
-.create-event-btn {
+} */
+/* .create-event-btn {
   padding: 0 10px;
   margin-right: 20px;
 }
@@ -30,9 +30,9 @@ button {
   margin-left: 20px;
   background: transparent;
   border: none;
-}
+} */
 
-.calendar__header {
+/* .calendar__header {
   display: flex;
   width: 100%;
   margin-top: 20px;
@@ -53,13 +53,13 @@ button {
   font-size: 30px;
   margin-top: 10px;
 }
-/* part 2 */
+
 .calendar {
   display: flex;
   flex-direction: column;
   height: calc(100vh - 60px);
-}
-.sidebar {
+} */
+/* .sidebar {
   height: 100%;
   width: 60px;
 }
@@ -88,8 +88,8 @@ button {
 .calendar__hour {
   height: 60px;
   border-bottom: 1px solid #eee;
-}
-.event {
+} */
+/* .event {
   position: relative;
   top: 30px;
   height: 100px;
@@ -107,8 +107,8 @@ button {
 }
 .event__title {
   font-weight: 500;
-}
-.modal {
+} */
+/* .modal {
   display: flex;
   position: fixed;
   justify-content: center;
@@ -130,8 +130,8 @@ button {
   padding: 20px;
   border-bottom: 1px solid rgb(0, 0, 0);
   border-radius: 10px;
-}
-.create-event {
+} */
+/* .create-event {
   display: flex;
   flex-direction: column;
 }
@@ -139,15 +139,14 @@ button {
   font-size: 30px;
   width: 24px;
   height: 24px;
-  /*+++++++++++*/
   margin-left: auto;
   transform: rotate(45deg);
   background: transparent;
   outline: none;
   border: none;
   cursor: pointer;
-}
-input,
+} */
+/* input,
 textarea {
   border: none;
 }
@@ -171,4 +170,4 @@ textarea {
   border: none;
   background-color: cornflowerblue;
   border-radius: 8px;
-}
+} */
