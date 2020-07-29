@@ -20,6 +20,7 @@ html {
   height: 770px;
   margin: 9px;
   background-color: #334247;
+  overflow: hidden;
 }
 #green {
   background-color: #5bb189;
@@ -29,4 +30,22 @@ html {
 }
 #orange {
   background-color: #ec632a;
+}
+.badge {
+  display: flex;
+  position: absolute;
+  left: 263px;
+  top: -2px;
+  width: 147px;
+  height: 25px;
+  transform: rotate(45deg);
+  background-color: #dc3f45;
+  z-index: 5;
+
+  & span {
+    margin: auto;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
