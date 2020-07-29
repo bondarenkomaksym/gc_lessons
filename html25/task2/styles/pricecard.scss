@@ -1,13 +1,18 @@
 .price-card {
   display: flex;
-  position: relative;
   margin: 0 auto;
-  margin-top: 33px;
+  min-width: 380px;
+  height: 770px;
+  margin: 9px;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  background-color: #334247;
   color: white;
+  overflow: hidden;
 
   &__title {
+    margin-top: 33px;
     font-size: 35px;
     line-height: 43px;
     font-weight: 700;

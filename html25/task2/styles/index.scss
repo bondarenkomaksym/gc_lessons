@@ -14,14 +14,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.card {
-  display: flex;
-  min-width: 380px;
-  height: 770px;
-  margin: 9px;
-  background-color: #334247;
-  overflow: hidden;
-}
+
 #green {
   background-color: #5bb189;
 }
@@ -35,7 +28,7 @@ body {
   display: flex;
   position: absolute;
   left: 263px;
-  top: -2px;
+  top: 30px;
   width: 147px;
   height: 25px;
   transform: rotate(45deg);

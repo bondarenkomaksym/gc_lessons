@@ -1,13 +1,18 @@
 .price-card {
   display: flex;
-  position: relative;
   margin: 0 auto;
-  margin-top: 33px;
+  min-width: 380px;
+  height: 770px;
+  margin: 9px;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  background-color: #334247;
   color: white;
+  overflow: hidden;
 }
 .price-card__title {
+  margin-top: 33px;
   font-size: 35px;
   line-height: 43px;
   font-weight: 700;
@@ -92,15 +97,6 @@ body {
   align-items: center;
 }
 
-.card {
-  display: flex;
-  min-width: 380px;
-  height: 770px;
-  margin: 9px;
-  background-color: #334247;
-  overflow: hidden;
-}
-
 #green {
   background-color: #5bb189;
 }
@@ -117,7 +113,7 @@ body {
   display: flex;
   position: absolute;
   left: 263px;
-  top: -2px;
+  top: 30px;
   width: 147px;
   height: 25px;
   transform: rotate(45deg);
