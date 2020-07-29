@@ -1,4 +1,5 @@
-@import "pricecard.scss";
+@import "./pricecard.scss";
+@import "./options-block.scss";
 
 * {
   box-sizing: border-box;
@@ -12,4 +13,11 @@ html {
   height: 100vh;
   justify-content: center;
   align-items: center;
+}
+.card {
+  display: flex;
+  min-width: 380px;
+  height: 770px;
+  margin: 9px;
+  background-color: #334247;
 }
