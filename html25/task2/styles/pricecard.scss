@@ -12,9 +12,7 @@
     font-weight: 700;
   }
 
-  &__price_green,
-  &__price_orange,
-  &__price_blue {
+  &__price {
     display: flex;
     margin-top: 33px;
     width: 380px;
@@ -46,9 +44,7 @@
     }
   }
 
-  &__order-btn_green,
-  &__order-btn_blue,
-  &__order-btn_orange {
+  &__order-btn {
     margin-top: 39px;
     width: 154px;
     height: 40px;
@@ -62,20 +58,5 @@
       line-height: 17px;
       text-align: center;
     }
-  }
-
-  &__price_green,
-  &__order-btn_green {
-    background-color: #5bb189;
-  }
-
-  &__price_blue,
-  &__order-btn_blue {
-    background-color: #3a6ba5;
-  }
-
-  &__price_orange,
-  &__order-btn_orange {
-    background-color: #ec632a;
   }
 }
