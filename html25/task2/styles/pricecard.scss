@@ -12,9 +12,9 @@
     font-weight: 700;
   }
 
-  &__rect_green,
-  &__rect_orange,
-  &__rect_blue {
+  &__price_green,
+  &__price_orange,
+  &__price_blue {
     display: flex;
     margin-top: 33px;
     width: 380px;
@@ -33,7 +33,7 @@
     line-height: 67px;
   }
 
-  &__long-text-block {
+  &__description {
     display: flex;
     margin-top: 40px;
 
@@ -46,9 +46,9 @@
     }
   }
 
-  &__btn_green,
-  &__btn_blue,
-  &__btn_orange {
+  &__order-btn_green,
+  &__order-btn_blue,
+  &__order-btn_orange {
     margin-top: 39px;
     width: 154px;
     height: 40px;
@@ -64,18 +64,18 @@
     }
   }
 
-  &__rect_green,
-  &__btn_green {
+  &__price_green,
+  &__order-btn_green {
     background-color: #5bb189;
   }
 
-  &__rect_blue,
-  &__btn_blue {
+  &__price_blue,
+  &__order-btn_blue {
     background-color: #3a6ba5;
   }
 
-  &__rect_orange,
-  &__btn_orange {
+  &__price_orange,
+  &__order-btn_orange {
     background-color: #ec632a;
   }
 }
