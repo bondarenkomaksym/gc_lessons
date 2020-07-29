@@ -39,12 +39,27 @@
   font-size: 15px;
   line-height: 18px;
 }
+.price-card__btn {
+  margin-top: 39px;
+  width: 154px;
+  height: 40px;
+  background-color: #5bb189;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+}
+.price-card__btn span {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+}
 
 .price-card__options-block {
   margin-top: 40px;
 }
 .price-card__options-line:nth-child(odd) {
-  background-color: #2a3438;
+  background-color: #2e3b3f;
 }
 .price-card__options-line {
   display: flex;

@@ -4,7 +4,8 @@
   }
 
   &__options-line:nth-child(odd) {
-    background-color: #2a3438;
+    // background-color: #2a3438;
+    background-color: #2e3b3f;
   }
 
   &__options-line {
@@ -14,6 +15,7 @@
     height: 50px;
 
     & span {
+      //   opacity: 0.5;
       margin-left: 22px;
       font-weight: 300;
       font-size: 15px;
