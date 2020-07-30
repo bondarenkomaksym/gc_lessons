@@ -3,6 +3,9 @@
 const nums = [2, 5, 6, 3, 0, 3, -1];
 
 let sum = nums.reduce(function (a, b) {
+  if (!Array.isArray(nums)) {
+    return null;
+  }
   return a + b;
 }, 0);
 
