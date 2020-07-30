@@ -6,7 +6,8 @@ const sortDesc = (numbers) => {
   if (!Array.isArray(numbers)) {
     return null;
   }
-  numbers.sort((a, b) => b - a);
-  return numbers;
+  const sorted = [...numbers];
+  sorted.sort((a, b) => b - a);
+  return sorted;
 };
 console.log(sortDesc(numbers));
