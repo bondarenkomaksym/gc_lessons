@@ -2,12 +2,8 @@
 
 const numbers = [2, 5, 6, 3, 0, 3, -1, 54];
 
-const sortDesc = (numbers) => {
-  if (!Array.isArray(numbers)) {
-    return null;
-  }
-  const sorted = [...numbers];
-  sorted.sort((a, b) => b - a);
-  return sorted;
-};
+const sortDesc = (numbers) => numbers.slice().sort((a, b) => b - a);
+
 console.log(sortDesc(numbers));
+
+// .slice() для того чтобы оригинал массива не изменился
