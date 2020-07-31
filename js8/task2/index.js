@@ -1,16 +1,12 @@
 "use strict";
 
-const people = ["John", "Olivya", "Oleksandr", "Emanuel", "Vanya", "Nastya"];
-
-function filterNames(people, textToFind) {
-  if (!Array.isArray(people)) {
-    return null;
+const concatProps = (obj) => {
+  const arr = [];
+  for (let key in obj) {
+    arr.push(obj[key]);
   }
-  return people.filter(
-    (data) =>
-      data.length > 5 &&
-      data.toLowerCase().indexOf(textToFind.toLowerCase()) > -1
-  );
-}
+  return arr;
+};
 
-console.log(filterNames(people, "ya"));
+const obj = { name: "John Doe", age: 17, interest: "football" };
+console.log(concatProps(obj));
