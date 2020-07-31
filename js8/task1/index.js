@@ -1,23 +1,14 @@
 "use strict";
 
-// const nums = [2, 5, 6, 3, 0, 3, -1];
-// let sum = nums.reduce(function (a, b) {
-//   if (!Array.isArray(nums)) {
-//     return null;
-//   }
-//   return a + b;
-// }, 0);
-// console.log(sum);
+const transformToObject = (arr) => {
+  let obj = {};
 
-// const nums = [2, 5, 6, 3, 0, 3, -1];
-// let sum = nums.reduce((a, b) => a + b, 0);
-// console.log(sum);
+  arr.forEach((e) => {
+    obj[e] = e;
+  });
+  return obj;
+};
+const arr = ["a", 17.1, "John Doe"];
+const result = transformToObject(arr);
 
-const nums = [2, 5, 6, 3, 0, 3, -1];
-function sum(nums) {
-  if (!Array.isArray(nums)) {
-    return null;
-  }
-  return nums.reduce((a, b) => a + b, 0);
-}
-console.log(sum(nums));
+console.log(result);
