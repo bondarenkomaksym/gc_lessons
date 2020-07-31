@@ -14,9 +14,6 @@ const numbers = [2, 5, 6, 3, 18, 4];
 
 const increaseEvenEl = (numbers, delta) =>
   numbers.map((x) => {
-    if (!Array.isArray(numbers)) {
-      return null;
-    }
     if (x % 2 !== 0) {
       return x + delta;
     } else {
