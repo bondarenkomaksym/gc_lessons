@@ -23,4 +23,3 @@ function getPrimes(n) {
     }
   }
 }
-getPrimes(20);
