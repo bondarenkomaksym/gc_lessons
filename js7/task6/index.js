@@ -6,6 +6,6 @@ const reverseArray = (numbers) => {
   if (!Array.isArray(numbers)) {
     return null;
   }
-  return numbers.reverse();
+  return numbers.slice().reverse();
 };
 console.log(reverseArray(numbers));
