@@ -7,8 +7,8 @@ const user = {
 user.hobby = "football";
 const anotherKey = "married";
 user.anotherKey = anotherKey;
-user["favourite music"] = "rock";
-user.adress = {};
-user.adress.country = "Ukraine";
-user.adress.building = 17;
+user["favorite music"] = "rock";
+user.address = {};
+user.address.country = "Ukraine";
+user.address.building = 17;
 console.log(user);
