@@ -7,9 +7,8 @@ function filterNames(people, textToFind) {
     return null;
   }
   return people.filter(
-    (data) =>
-      data.length > 5 &&
-      data.toLowerCase().indexOf(textToFind.toLowerCase()) > -1
+    (name) =>
+      name.length > 5 && name.toLowerCase().includes(textToFind.toLowerCase())
   );
 }
 
