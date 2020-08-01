@@ -6,7 +6,7 @@ const user = {
 };
 user.hobby = "football";
 const anotherKey = "married";
-user.anotherKey = anotherKey;
+user[anotherKey] = false;
 user["favorite music"] = "rock";
 user.address = {};
 user.address.country = "Ukraine";
