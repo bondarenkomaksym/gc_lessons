@@ -4,22 +4,18 @@
 // 3. Create prototype solution & testing - черновое решение
 // 4. Final testing & refactoring -> final solution
 
-//input: function
+//input: Obj, key, value
 //output: key prop
 
 "use strict";
 
-const user = {
+const obj = {
   name: "Tom",
-  age: 17,
 };
+let key = "age";
+let value = 17;
+// Obj[key] = value;
+// console.log(Obj);
+const addPropertyV1 = (obj, key, value) => (obj[key] = value);
 
-function getKeys(user) {
-  const keys = Object.keys(user);
-  console.log(keys);
-  const result = keys.forEach(function (key) {
-    console.log(key + ": " + user[key]);
-  });
-  return result;
-}
-console.log(getKeys(user));
+console.log(addPropertyV1(obj, key, value));
