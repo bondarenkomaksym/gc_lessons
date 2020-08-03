@@ -9,17 +9,12 @@
 
 "use strict";
 
-const user = {
+const obj = {
   name: "Tom",
   age: 17,
 };
 
-function getKeys(user) {
-  const keys = Object.keys(user);
-  console.log(keys);
-  const result = keys.forEach(function (key) {
-    console.log(key + ": " + user[key]);
-  });
-  return result;
+function getKeys(obj) {
+  Object.keys(obj).forEach((keys) => console.log(keys));
 }
-console.log(getKeys(user));
+getKeys(obj);
