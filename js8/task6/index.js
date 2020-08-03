@@ -7,16 +7,16 @@
 //input: Obj, key, value
 //output: key prop
 
-"use strict";
+// "use strict";
 
-const obj = {
-  name: "Tom",
-};
-let newKey = "age";
-let newValue = 17;
+// const obj = {
+//   name: "Tom",
+// };
+// let newKey = "age";
+// let newValue = 17;
 
 function addPropertyV1(obj, key, value) {
   obj[key] = value;
   return obj;
 }
-console.log(addPropertyV1(obj, newKey, newValue));
+// console.log(addPropertyV1(obj, newKey, newValue));
