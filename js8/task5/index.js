@@ -16,11 +16,9 @@ const user = {
 
 function getKeys(user) {
   const keys = Object.keys(user);
-  console.log(keys);
   keys.forEach(function (key) {
     console.log(key + ": " + user[key]);
   });
   return keys;
 }
-
-getKeys(user);
+console.log(getKeys(user));
