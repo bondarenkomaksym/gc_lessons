@@ -4,8 +4,8 @@
 // 3. Create prototype solution & testing - черновое решение
 // 4. Final testing & refactoring -> final solution
 
-//input: number, number, number
-//output: string
+//input: function
+//output: key prop
 
 "use strict";
 
@@ -14,7 +14,12 @@ const user = {
   age: 17,
 };
 
-function getKeys() {
-  return Object.keys(user);
+function getKeys(user) {
+  const keys = Object.keys(user);
+  keys.forEach(function (key) {
+    console.log(key + ": " + user[key]);
+  });
+  return keys;
 }
-console.log(getKeys(user));
+
+getKeys(user);
