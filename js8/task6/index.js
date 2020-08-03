@@ -12,10 +12,11 @@
 const obj = {
   name: "Tom",
 };
-let key = "age";
-let value = 17;
-// Obj[key] = value;
-// console.log(Obj);
-const addPropertyV1 = (obj, key, value) => (obj[key] = value);
+let newKey = "age";
+let newValue = 17;
 
-console.log(addPropertyV1(obj, key, value));
+function addPropertyV1(obj, key, value) {
+  obj[key] = value;
+  return obj;
+}
+console.log(addPropertyV1(obj, newKey, newValue));
