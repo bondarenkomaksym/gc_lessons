@@ -24,13 +24,3 @@ const getAdults = (usersObj) => {
 console.log(getAdults(obj));
 
 //Object.entries - вывод данных с объекта в отдельные массивы - сначала ключ потом его значение.
-
-//более короткий вариант
-
-// const obj = { "John Doe": 19, Tom: 17, Bob: 18 };
-
-// const getAdults = (usersObj) => Object.entries(usersObj)
-//   .filter((user) => user[1] >= 18)
-//   .map((user) => user[0]);
-
-// console.log(getAdults(obj));
