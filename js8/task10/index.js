@@ -9,31 +9,29 @@
 
 "use strict";
 
-const user = { name: "Bob" };
-let numbers = "321321";
+const userData = { name: "Bob" };
+let userId = "321321";
 
-const addPropertyV1 = (user, numbers) => {
-  user.id = numbers;
-  return user;
-};
-console.log(addPropertyV1(user, numbers));
+function addPropertyV1(userData, userId) {
+  userData.id = userId;
+  return userData;
+}
+console.log(addPropertyV1(userData, userId));
 
-const addPropertyV2 = (user, numbers) => {
-  Object.assign((user.id = numbers));
-  return user;
-};
-console.log(addPropertyV2(user, numbers));
+function addPropertyV2(userData, userId) {
+  const sourceData = { id: userId };
+  return Object.assign(userData, sourceData);
+}
+console.log(addPropertyV2(userData, userId));
 
-const addPropertyV3 = (user, numbers) => {
-  let clone = Object.assign({}, user);
-  Object.assign(clone, (user.id = numbers));
-  return user;
-};
-console.log(addPropertyV3(user, numbers));
+function addPropertyV3(userData, userId) {
+  const sourceData = { id: userId };
+  return Object.assign({}, userData, sourceData);
+}
+console.log(addPropertyV3(userData, userId));
 
-const addPropertyV4 = (user, numbers) => {
-  let newObj = { ...user };
-  Object.assign(newObj, (user.id = numbers));
-  return user;
-};
-console.log(addPropertyV4(user, numbers));
+function addPropertyV4(userData, userId) {
+  let sorceData = { id: userId };
+  return Object.assign({ ...userData }, sorceData);
+}
+console.log(addPropertyV4(userData, userId));
