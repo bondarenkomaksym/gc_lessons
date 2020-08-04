@@ -9,14 +9,14 @@
 
 // "use strict";
 
-// const obj1 = {
-//   name: "Tom",
-//   age: 17,
-// };
-// const obj2 = {
-//   name: "Bob",
-//   student: false,
-// };
+const obj1 = {
+  name: "Tom",
+  age: 17,
+};
+const obj2 = {
+  name: "Bob",
+  student: false,
+};
 
 const mergeObjectsV1 = (obj1, obj2) => Object.assign({}, obj1, obj2);
 // console.log(mergeObjectsV1(obj1, obj2));
