@@ -12,26 +12,26 @@
 const userData = { name: "Bob" };
 let userId = "321321";
 
-function addPropertyV1(userData, userId) {
+const addPropertyV1 = (userData, userId) => {
   userData.id = userId;
   return userData;
-}
+};
 console.log(addPropertyV1(userData, userId));
 
-function addPropertyV2(userData, userId) {
+const addPropertyV2 = (userData, userId) => {
   const newObj = { id: userId };
   return Object.assign(userData, newObj);
-}
+};
 console.log(addPropertyV2(userData, userId));
 
-function addPropertyV3(userData, userId) {
+const addPropertyV3 = (userData, userId) => {
   const newObj = { id: userId };
   return Object.assign({}, userData, newObj);
-}
+};
 console.log(addPropertyV3(userData, userId));
 
-function addPropertyV4(userData, userId) {
+const addPropertyV4 = (userData, userId) => {
   let newObj = { id: userId };
   return Object.assign({ ...userData }, newObj);
-}
+};
 console.log(addPropertyV4(userData, userId));
