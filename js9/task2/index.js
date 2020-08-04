@@ -5,22 +5,11 @@
 // 4. Final testing & refactoring -> final solution
 
 //input: Object
-//output: massive
+//output: Object
 
 "use strict";
 
 const obj = { "John Doe": 19, Tom: 17, Bob: 18 };
 
-const getAdults = (usersObj) => {
-  //Object.entries - вывод данных с объекта в отдельные массивы - сначала ключ потом его значение.
-  const usersArray = Object.entries(usersObj);
-  //дальше нужно отфильтровать в каждом массиве значение возраста(у него индекс 1)
-  const filteredUsersArray = usersArray.filter((user) => user[1] >= 18);
-  //из отфильтрованных массивов вывести соотетствующие ключи
-  const usersNames = filteredUsersArray.map((user) => user[0]);
-
-  return usersNames;
-};
-console.log(getAdults(obj));
-
-//Object.entries - вывод данных с объекта в отдельные массивы - сначала ключ потом его значение.
+const copyObj = (usersObj) => Object.assign({}, usersObj);
+console.log(copyObj(obj));
