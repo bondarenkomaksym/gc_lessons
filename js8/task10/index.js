@@ -19,19 +19,19 @@ function addPropertyV1(userData, userId) {
 console.log(addPropertyV1(userData, userId));
 
 function addPropertyV2(userData, userId) {
-  const sourceData = { id: userId };
-  return Object.assign(userData, sourceData);
+  const newObj = { id: userId };
+  return Object.assign(userData, newObj);
 }
 console.log(addPropertyV2(userData, userId));
 
 function addPropertyV3(userData, userId) {
-  const sourceData = { id: userId };
-  return Object.assign({}, userData, sourceData);
+  const newObj = { id: userId };
+  return Object.assign({}, userData, newObj);
 }
 console.log(addPropertyV3(userData, userId));
 
 function addPropertyV4(userData, userId) {
-  let sorceData = { id: userId };
-  return Object.assign({ ...userData }, sorceData);
+  let newObj = { id: userId };
+  return Object.assign({ ...userData }, newObj);
 }
 console.log(addPropertyV4(userData, userId));
