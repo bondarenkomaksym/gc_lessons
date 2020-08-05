@@ -25,6 +25,7 @@ const rooms = {
 };
 
 function getPeople(obj) {
+  if (Object.keys(obj).length === 0) return [];
   const people = Object.values(obj)
     .reduce((acc, val) => acc.concat(val))
     .map((el) => el.name);
