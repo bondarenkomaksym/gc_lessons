@@ -11,6 +11,14 @@
 
 const elementsList = [2, 5.74, "  6.3", NaN, null, undefined, Infinity];
 
-const getFiniteNumbers = (arr) => arr.map((el) => Number.isFinite(el));
+// function getFiniteNumbers(arr) {
+//   let result = arr.map((el) => Number.isFinite(el));
+
+//   return result;
+// }
+
+// console.log(getFiniteNumbers(elementsList));
+
+const getFiniteNumbers = (arr) => arr.filter((el) => Number.isFinite(el));
 
 console.log(getFiniteNumbers(elementsList));
