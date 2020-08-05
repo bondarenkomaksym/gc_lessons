@@ -32,6 +32,6 @@ console.log(addPropertyV3(userData, userId));
 
 const addPropertyV4 = (userData, userId) => {
   let newObj = { id: userId };
-  return Object.assign({ ...userData }, newObj);
+  return { ...userData, ...newObj };
 };
 console.log(addPropertyV4(userData, userId));
