@@ -21,8 +21,9 @@ const customers = {
 };
 
 function getCustomersList(obj) {
-  const result = Object.entries(obj).map((el) => el[1]);
-  return result;
+  let clone = { ...obj };
+  const result = Object.entries(clone).map((el) => el[1]);
+  return result.sort((a, b) => a.age - b.age);
 }
 
 console.log(getCustomersList(customers));
