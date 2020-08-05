@@ -21,7 +21,7 @@ const customers = {
 };
 
 function getCustomersList(obj) {
-  const result = Object.entries(obj).map((el) => el);
+  const result = Object.entries(obj).map((el) => el[1]);
   return result;
 }
 
