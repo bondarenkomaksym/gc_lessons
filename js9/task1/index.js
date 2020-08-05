@@ -16,7 +16,7 @@ const getAdults = (usersObj) => {
   const usersArray = Object.entries(usersObj);
   //дальше нужно отфильтровать в каждом массиве значение возраста(у него индекс 1)
   const filteredUsersArray = usersArray.filter((user) => user[1] >= 18);
-  //из отфильтрованных массивов вывести соотетствующие ключи
+  //из отфильтрованных массивов вывести соответствующие ключи
   const usersNames = filteredUsersArray.map((user) => user[0]);
 
   return usersNames;
