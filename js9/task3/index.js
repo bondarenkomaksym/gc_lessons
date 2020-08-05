@@ -24,8 +24,11 @@ const rooms = {
   ],
 };
 
-const getPeople = (obj) =>
-  Object.values(obj)
-    .flat()
+function getPeople(obj) {
+  const people = Object.values(obj)
+    .reduce((acc, val) => acc.concat(val))
     .map((el) => el.name);
+  return people;
+}
+
 console.log(getPeople(rooms));
