@@ -9,8 +9,8 @@
 
 "use strict";
 
-const elementsList = [2, 5.74, "  6.3", NaN, null, undefined, Infinity];
+// const elementsList = [2, 5.74, "  6.3", NaN, null, undefined, Infinity];
 
 const getFiniteNumbers = (arr) => arr.map((el) => Number.isFinite(el));
 
-console.log(getFiniteNumbers(elementsList));
+// console.log(getFiniteNumbers(elementsList));
