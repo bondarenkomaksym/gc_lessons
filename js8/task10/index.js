@@ -46,8 +46,6 @@ const addPropertyV1 = (userData, userId) => {
   userData.id = userId;
   return userData;
 };
-// console.log(addPropertyV1(userData, userId));
-
 console.log(addPropertyV1(obj, "2222"));
 console.log("res", obj);
 
