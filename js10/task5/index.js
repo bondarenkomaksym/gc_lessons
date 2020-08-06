@@ -13,7 +13,7 @@ const elements = [77, 3, 1, 45, 20, Math.PI];
 
 const getTotalPrice = (arr) => {
   let sum = arr.reduce((a, b) => a + b);
-  return Math.floor(sum * 100) / 100;
+  return "$" + Math.floor(sum * 100) / 100;
 };
 
 console.log(getTotalPrice(elements));
