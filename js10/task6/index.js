@@ -28,4 +28,4 @@ function randomInteger(min, max) {
   // return Math.round(Math.random() * (max - min)) + min;
   // return Math.round(min + Math.random(max - min));
 }
-console.log(getRandomNumbers(20, -40.5, -30.8));
+// console.log(getRandomNumbers(20, -40.5, -30.8));
