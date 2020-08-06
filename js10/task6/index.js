@@ -19,7 +19,7 @@ const getRandomNumbers = (length, from, to) => {
     .map(() => from + (to - from) * Math.random())
     .map((num) => (num < 0 ? Math.ceil(num) : Math.floor(num)));
 };
-console.log(getRandomNumbers(20, -3.8, -0.7));
+console.log(getRandomNumbers(20, -40.5, -30.8));
 
 // const getRandomNumbers = (length, min, max) => {
 //   let result = [];
@@ -36,5 +36,8 @@ console.log(getRandomNumbers(20, -3.8, -0.7));
 //   min = Math.ceil(min);
 //   max = Math.floor(max);
 //   return Math.round(min - 0.5 + Math.random() * (max - min + 1));
+//   // return Math.floor(Math.random() * max) + min;
+//   // return Math.round(Math.random() * (max - min)) + min;
+//   // return Math.round(min + Math.random(max - min));
 // }
 // console.log(getRandomNumbers(20, -40.5, -30.8));
