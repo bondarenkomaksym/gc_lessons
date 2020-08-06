@@ -14,7 +14,6 @@ const getRandomNumbers = (length, min, max) => {
   if (!Number.isInteger(min, max)) {
     return null;
   }
-
   for (let i = 0; i < length; i++) {
     result.push(randomInteger(min, max));
   }
@@ -23,7 +22,7 @@ const getRandomNumbers = (length, min, max) => {
 
 function randomInteger(min, max) {
   let random = min - 0.5 + Math.random() * (max - min + 1);
-  random = Math.ceil(random);
+  random = Math.round(random);
   return random;
 }
-console.log(getRandomNumbers(5, 2, 7));
+console.log(getRandomNumbers(5, -8, 7));
