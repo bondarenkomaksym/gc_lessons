@@ -24,7 +24,7 @@ function randomInteger(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
   // return Math.floor(Math.random() * max) + min;
-  // return Math.floor(Math.random() * (max - min)) + min;
-  return Math.round(min + Math.random(max - min));
+  return Math.round(Math.random() * (max - min)) + min;
+  // return Math.round(min + Math.random(max - min));
 }
-console.log(getRandomNumbers(50, 2, 8));
+console.log(getRandomNumbers(50, 2, 6));
