@@ -19,12 +19,12 @@ const getRandomNumbers = (length, min, max) => {
 };
 
 function randomInteger(min, max) {
-  let random = min - 0.5 + Math.random() * (max - min + 1);
-  random = Math.floor(random);
   if (!Number.isInteger(min, max)) {
     return null;
   }
+  let random = min - 0.5 + Math.random() * (max - min + 1);
+  random = Math.round(random);
   return random;
 }
 
-console.log(getRandomNumbers(100, 2, 8));
+console.log(getRandomNumbers(5, 3, 8));
