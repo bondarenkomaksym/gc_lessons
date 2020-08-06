@@ -12,7 +12,7 @@
 const elements = [-777, 3, -1, 45, -20];
 
 const getMaxAbsoluteNumber = (arr) => {
-  if (Object.keys(arr).length === 0) return null;
+  if (arr.length === 0) return null;
   const absoluteValue = arr.map((number) => Math.abs(number));
   return Math.max(...absoluteValue);
 };
