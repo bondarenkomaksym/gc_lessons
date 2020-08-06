@@ -20,11 +20,11 @@ const getRandomNumbers = (length, min, max) => {
 
 function randomInteger(min, max) {
   let random = min - 0.5 + Math.random() * (max - min + 1);
-  random = Math.ceil(random);
+  random = Math.floor(random);
   if (!Number.isInteger(random)) {
     return null;
   }
   return random;
 }
 
-console.log(getRandomNumbers(3, 120, 166));
+console.log(getRandomNumbers(3, 40, 67));
