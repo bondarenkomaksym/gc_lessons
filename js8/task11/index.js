@@ -14,5 +14,5 @@ const valuesList = ["Bob", "Ukraine", 34];
 
 const buildObject = (keysList, valuesList) =>
   keysList.reduce((acc, n, i) => ((acc[n] = valuesList[i]), acc), {});
-
+//пустой объект как исходное значение, в послдедствии добавляем каждое значение в аккумулятор
 console.log(buildObject(keysList, valuesList));
