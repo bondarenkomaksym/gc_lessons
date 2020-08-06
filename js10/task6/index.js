@@ -26,4 +26,4 @@ function randomInteger(min, max) {
   random = Math.round(random);
   return random;
 }
-console.log(getRandomNumbers(5, -0.4, 7));
+console.log(getRandomNumbers(5, 2, 7));
