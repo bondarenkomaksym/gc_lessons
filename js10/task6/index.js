@@ -21,8 +21,8 @@ const getRandomNumbers = (length, min, max) => {
 };
 
 function randomInteger(min, max) {
-  let random = min - 0.5 + Math.random() * (max - min + 1);
-  random = Math.round(random);
-  return random;
+  return Math.round(Math.random(min, max) * (max - min) + min);
+  // let random = min - 0.5 + Math.random() * (max - min + 1);
+  // return Math.round(random);
 }
-console.log(getRandomNumbers(5, -8, 7));
+console.log(getRandomNumbers(5, 8, 17));
