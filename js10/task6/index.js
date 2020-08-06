@@ -11,9 +11,9 @@
 
 const getRandomNumbers = (length, min, max) => {
   let result = [];
-  // if (!Number.isInteger(min, max)) {
-  //   return null;
-  // }
+  if (!Number.isInteger(min, max)) {
+    return null;
+  }
   for (let i = 0; i < length; i++) {
     result.push(randomInteger(min, max));
   }
