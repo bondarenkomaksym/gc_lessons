@@ -21,10 +21,10 @@ const getRandomNumbers = (length, min, max) => {
 };
 
 function randomInteger(min, max) {
-  // return Math.round(min + Math.random(max - min));
   min = Math.ceil(min);
   max = Math.floor(max);
   // return Math.floor(Math.random() * max) + min;
-  return Math.floor(Math.random() * (max - min)) + min;
+  // return Math.floor(Math.random() * (max - min)) + min;
+  return Math.round(min + Math.random(max - min));
 }
 console.log(getRandomNumbers(50, 2, 8));
