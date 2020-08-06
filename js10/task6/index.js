@@ -11,9 +11,9 @@
 
 const getRandomNumbers = (length, min, max) => {
   let result = [];
-  if (!Number.isInteger(min, max)) {
-    return null;
-  }
+  // if (!Number.isInteger(min, max)) {
+  //   return null;
+  // }
   for (let i = 0; i < length; i++) {
     result.push(randomInteger(min, max));
   }
@@ -21,10 +21,10 @@ const getRandomNumbers = (length, min, max) => {
 };
 
 function randomInteger(min, max) {
-  min = Math.ceil(min);
+  min = Math.floor(min);
   max = Math.floor(max);
   // return Math.floor(Math.random() * max) + min;
   return Math.round(Math.random() * (max - min)) + min;
   // return Math.round(min + Math.random(max - min));
 }
-console.log(getRandomNumbers(50, 2, 6));
+console.log(getRandomNumbers(20, -40.5, -30.8));
