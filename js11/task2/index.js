@@ -21,19 +21,9 @@ function sortContacts(contacts, isAscending) {
   }
 
   const sorted = contacts.sort((a, b) => {
-    if (isAscending) {
-      return a.name.localeCompare(b.name);
-    } else {
-      return b.name.localeCompare(a.name);
-    }
+    return (a.name < b.name ? -1 : 1) * (isAscending ? 1 : -1);
   });
-  // const sorted = contacts.sort((a, b) => {
-  //   if (isAscending === true) {
-  //     return a.name.localeCompare(b.name);
-  //   } else {
-  //     return b.name.localeCompare(a.name);
-  //   }
-  // });
+
   return sorted;
 }
 
