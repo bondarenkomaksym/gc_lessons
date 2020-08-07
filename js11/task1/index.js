@@ -9,14 +9,14 @@
 
 "use strict";
 
-const text = "Hello World";
+const text = "lorem ipsum dolor sit amet";
 
 const splitText = (text, length) => {
+  if (typeof text !== "string") return null;
   let strArr = [];
   let startPosition = 0;
   while (true) {
     let chunk = text.substr(startPosition, length);
-
     if (chunk.length === 0) {
       break;
     }
