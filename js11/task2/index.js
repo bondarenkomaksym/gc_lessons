@@ -21,7 +21,10 @@ function sortContacts(contacts, isAscending) {
   }
 
   const sorted = contacts.sort((a, b) => {
-    return (a.name < b.name ? -1 : 1) * (isAscending ? 1 : -1);
+    // return (a.name < b.name ? -1 : 1) * (isAscending ? 1 : -1);
+    return isAscending
+      ? a.name.localeCompare(b.name)
+      : -a.name.localeCompare(b.name);
   });
 
   return sorted;
