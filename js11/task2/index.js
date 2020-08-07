@@ -15,19 +15,17 @@ let contacts = [
   { name: "Alex", phoneNumber: "989898" },
 ];
 
-function sortContacts(contacts, isAscending) {
+function sortContacts(contacts, isAscending = true) {
   if (!Array.isArray(contacts)) {
     return null;
   }
 
   const sorted = contacts.sort((a, b) => {
-    // return (a.name < b.name ? -1 : 1) * (isAscending ? 1 : -1);
     return isAscending
       ? a.name.localeCompare(b.name)
-      : -a.name.localeCompare(b.name);
+      : b.name.localeCompare(a.name);
   });
-
   return sorted;
 }
 
-console.log(sortContacts(contacts, true));
+console.log(sortContacts(contacts));
