@@ -21,12 +21,19 @@ function sortContacts(contacts, isAscending) {
   }
 
   const sorted = contacts.sort((a, b) => {
-    if (isAscending === true) {
+    if (isAscending) {
       return a.name.localeCompare(b.name);
     } else {
       return b.name.localeCompare(a.name);
     }
   });
+  // const sorted = contacts.sort((a, b) => {
+  //   if (isAscending === true) {
+  //     return a.name.localeCompare(b.name);
+  //   } else {
+  //     return b.name.localeCompare(a.name);
+  //   }
+  // });
   return sorted;
 }
 
