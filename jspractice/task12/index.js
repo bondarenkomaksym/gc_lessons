@@ -36,14 +36,30 @@ const compareObjects = (a, b) => {
     return false;
   }
   // сравнить на соответствие ключи
-  for (let key of keys1) {
-    if (a[key] !== b[key]) {
+  // for (let key of keys1) {
+  //   if (a[key] !== b[key]) {
+  //     return false;
+  //   }
+  // }
+  keys1.forEach((key, index) => {
+    console.log("key1" + key);
+    console.log("value1" + obj1[key]);
+
+    console.log("key1" + keys2[index]);
+    console.log("value1" + obj2[keys2[index]]);
+
+    if (obj1[key] !== obj2[keys2[index]]) {
       return false;
     }
-  }
+  });
 
-  return true;
+  // return true;
 };
 console.log(compareObjects(obj1, obj2));
-console.log(compareObjects(obj2, obj3));
-console.log(compareObjects(obj1, obj4));
+// console.log(compareObjects(obj2, obj3));
+// console.log(compareObjects(obj1, obj4));
+
+// console.log(obj1 == obj4);
+// console.log(obj1 === obj4);
+// //сравнение функций
+// console.log((() => {}) === (() => {}));
