@@ -13,25 +13,26 @@
 // let str = "This is a string";
 // let char = "is";
 
-function countOccurrences(str, char) {
-  if (char.length === 0) return null;
-  let arr = str.split(" ");
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] == char) counter++;
-  }
-  return counter;
-}
-// console.log(countOccurrences(str, char));
-
-//сквозной поиск текста в цельной строке
-// let str = "Final testing & refactoring";
-// let char = "in";
 // function countOccurrences(str, char) {
-//   let counter = 0;
-//   let position = -1;
-//   while ((position = str.indexOf(char, position + 1)) !== -1) {
-//     counter++;
+//   if (char.length === 0) return null;
+//   let arr = str.split(" ");
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] == char) counter++;
 //   }
 //   return counter;
 // }
 // console.log(countOccurrences(str, char));
+
+//сквозной поиск текста в цельной строке
+let str = "Final testing & refactoring";
+let char = "in";
+function countOccurrences(str, char) {
+  if (char.length === 0) return null;
+  let counter = 0;
+  let position = -1;
+  while ((position = str.indexOf(char, position + 1)) !== -1) {
+    counter++;
+  }
+  return counter;
+}
+console.log(countOccurrences(str, char));
