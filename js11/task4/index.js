@@ -4,24 +4,10 @@
 // 3. Create prototype solution & testing - черновое решение
 // 4. Final testing & refactoring -> final solution
 
-//input: string, number
-//output: massive
+//input: string, string
+//output: number
 
 "use strict";
-
-// let counter = 0;
-// let str = "This is a string";
-// let char = "is";
-
-// function countOccurrences(str, char) {
-//   if (char.length === 0) return null;
-//   let arr = str.split(" ");
-//   for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] == char) counter++;
-//   }
-//   return counter;
-// }
-// console.log(countOccurrences(str, char));
 
 //сквозной поиск текста в цельной строке
 let str = "Final testing & refactoring";
@@ -36,3 +22,17 @@ function countOccurrences(str, char) {
   return counter;
 }
 console.log(countOccurrences(str, char));
+
+// let counter = 0;
+// let str = "This is a string";
+// let char = "is";
+
+// function countOccurrences(str, char) {
+//   if (char.length === 0) return null;
+//   let arr = str.split(" ");
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] == char) counter++;
+//   }
+//   return counter;
+// }
+// console.log(countOccurrences(str, char));
