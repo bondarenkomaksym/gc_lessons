@@ -9,9 +9,9 @@
 
 "use strict";
 
-let counter = 0;
-let str = "This is a string";
-let char = "is";
+// let counter = 0;
+// let str = "This is a string";
+// let char = "is";
 
 function countOccurrences(str, char) {
   if (char.length === 0) return null;
@@ -21,7 +21,7 @@ function countOccurrences(str, char) {
   }
   return counter;
 }
-console.log(countOccurrences(str, char));
+// console.log(countOccurrences(str, char));
 
 //сквозной поиск текста в цельной строке
 // let str = "Final testing & refactoring";
