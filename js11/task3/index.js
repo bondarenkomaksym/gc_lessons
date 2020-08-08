@@ -12,23 +12,24 @@
 // const text = "This is a new string!";
 // console.log(text.split(/(?<=^(?:.{4})+)(?!$)/));
 
-// const str = "This is a new string!";
-// const length = 4; // длина одной части
-// const pattern = new RegExp(".{1," + length + "}", "ig");
-// let res = str.match(pattern).map((item) => item.padEnd(length, "."));
-// console.log(res);
+const str = "lorem ipsum dolor sit amet";
+const length = 4; // длина одной части
+const pattern = new RegExp(".{1," + length + "}", "ig");
+//
+let res = str.match(pattern).map((item) => item.padEnd(length, "."));
+console.log(res);
 
-var str = "This is a new string!";
+// var str = "This is a new string!";
 
-function* chunk(str, len) {
-  var padded = str.padEnd(Math.ceil(str.length / len) * len, ".");
+// function* chunk(str, len) {
+//   var padded = str.padEnd(Math.ceil(str.length / len) * len, ".");
 
-  for (var i = 0; i < padded.length / len; i++) {
-    yield padded.substring(i * len, (i + 1) * len);
-  }
-}
+//   for (var i = 0; i < padded.length / len; i++) {
+//     yield padded.substring(i * len, (i + 1) * len);
+//   }
+// }
 
-console.log([...chunk(str, 4)]);
+// console.log([...chunk(str, 4)]);
 
 // const splitString = (text, length) => {
 //   if (typeof text !== "string") return null;
