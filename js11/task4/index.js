@@ -14,7 +14,7 @@ let str = "This is a string";
 let char = "is";
 
 function countOccurrences(str, char) {
-  if (str.length === 0) return null;
+  if (char.length === 0) return null;
   let arr = str.split(" ");
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] == char) counter++;
