@@ -9,22 +9,14 @@
 
 "use strict";
 
-const str = "lorem ipsum dolor sit amet";
+const arr = ["  1.9 ", "16.4", 17, " 1 dollar "];
 
-const splitString = (str, length) => {
-  if (typeof str !== "string") return null;
-
-  if (length === undefined) {
-    const pattern = new RegExp(".{1," + 10 + "}", "ig");
-    let res = str.match(pattern).map((item) => item.padEnd(10, "."));
-    return res;
-  } else {
-    const pattern = new RegExp(".{1," + length + "}", "ig");
-    let res = str.match(pattern).map((item) => item.padEnd(length, "."));
-    return res;
-  }
+const cleanTransactionsList = (arr) => {
+  const pattern = new RegExp(".{1," + 10 + "}", "ig");
+  let res = str.match(pattern).map((item) => item.padEnd(10, "."));
+  return res;
 };
-console.log(splitString(str, 4));
+console.log(cleanTransactionsList(arr));
 
 //ищем в строке паттерн указанной длины состоящий из любых символов
 // const pattern = new RegExp(".{1," + length + "}", "ig");
