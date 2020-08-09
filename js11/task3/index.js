@@ -9,47 +9,30 @@
 
 "use strict";
 
+const str = "lorem ipsum dolor sit amet";
+
+const splitString = (str, length) => {
+  if (typeof str !== "string") return null;
+
+  if (length === undefined) {
+    const pattern = new RegExp(".{1," + 10 + "}", "ig");
+    let res = str.match(pattern).map((item) => item.padEnd(10, "."));
+    return res;
+  } else {
+    const pattern = new RegExp(".{1," + length + "}", "ig");
+    let res = str.match(pattern).map((item) => item.padEnd(length, "."));
+    return res;
+  }
+};
+console.log(splitString(str, 4));
+
+//ищем в строке паттерн указанной длины состоящий из любых символов
+// const pattern = new RegExp(".{1," + length + "}", "ig");
+//проверяем количество вхождений паттерна в строку
+// let res = str.match(pattern);
+//дополняем методом padEnd элементы длина которых меньше переменной
+// let resMap = res.map((item) => item.padEnd(length, "."));
+// console.log(resMap);
+
 // const text = "This is a new string!";
 // console.log(text.split(/(?<=^(?:.{4})+)(?!$)/));
-
-const str = "lorem ipsum dolor sit amet";
-const length = 4; // длина одной части
-const pattern = new RegExp(".{1," + length + "}", "ig");
-let res = str.match(pattern).map((item) => item.padEnd(length, "."));
-console.log(res);
-
-// var str = "This is a new string!";
-// function* chunk(str, len) {
-//   var padded = str.padEnd(Math.ceil(str.length / len) * len, ".");
-//   for (var i = 0; i < padded.length / len; i++) {
-//     yield padded.substring(i * len, (i + 1) * len);
-//   }
-// }
-// console.log([...chunk(str, 4)]);
-
-// const splitString = (text, length) => {
-//   if (typeof text !== "string") return null;
-//   const strArr = [];
-//   let startPosition = 0;
-//   if (length === undefined) {
-//     while (true) {
-//       let chunk = text.substr(startPosition, 10);
-//       if (chunk.length === 0) {
-//         break;
-//       }
-//       strArr.push(chunk[0].toUpperCase() + chunk.slice(1));
-//       startPosition += 10;
-//     }
-//   } else {
-//     while (true) {
-//       let chunk = text.substr(startPosition, length);
-//       if (chunk.length === 0) {
-//         break;
-//       }
-//       strArr.push(chunk[0].toUpperCase() + chunk.slice(1));
-//       startPosition += length;
-//     }
-//   }
-//   return strArr.join(", ");
-// };
-// console.log(splitString(text, 4));
