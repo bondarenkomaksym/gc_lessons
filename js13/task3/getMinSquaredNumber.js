@@ -4,8 +4,8 @@
 // 3. Create prototype solution & testing - черновое решение
 // 4. Final testing & refactoring -> final solution
 
-//input:
-//output:
+//input: massive
+//output: min number
 
 "use strict";
 let arr = [-777, 3, -2, 6, 45, -20];
@@ -14,6 +14,4 @@ export const getMinSquaredNumber = (arr) => {
   let square = arr.map((num) => num * num);
   return Math.min(...square);
 };
-
 console.log(getMinSquaredNumber(arr));
-//  => 4
