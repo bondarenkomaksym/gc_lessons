@@ -15,7 +15,7 @@ const obj1 = {
 };
 const obj2 = {
   name: "Bob",
-  age: 17,
+  age: 19,
 };
 const obj3 = {
   name: "Bob",
@@ -41,20 +41,21 @@ const compareObjects = (a, b) => {
   //     return false;
   //   }
   // }
-  keys1.forEach((key, index) => {
-    // console.log("key1" + key);
-    // console.log("value1" + obj1[key]);
-    // console.log("key1" + keys2[index]);
+  let boolean = true;
+  keys1.forEach((key) => {
+    // console.log("key1: " + key, "value1: " + obj1[key]);
+    // console.log("value1: " + obj1[key]);
+    // console.log("key2: " + keys2[index], "value2: " + obj2[keys2[index]]);
     // console.log("value1" + obj2[keys2[index]]);
-    // if (obj1[key] !== obj2[keys2[index]]) {
-    //   return false;
+    if (a[key] !== b[key]) {
+      boolean = false;
+    }
   });
-
-  // return true;
+  return boolean;
 };
 console.log(compareObjects(obj1, obj2));
-// console.log(compareObjects(obj2, obj3));
-// console.log(compareObjects(obj1, obj4));
+console.log(compareObjects(obj2, obj3));
+console.log(compareObjects(obj1, obj4));
 
 // console.log(obj1 == obj4);
 // console.log(obj1 === obj4);
