@@ -42,15 +42,12 @@ const compareObjects = (a, b) => {
   //   }
   // }
   keys1.forEach((key, index) => {
-    console.log("key1" + key);
-    console.log("value1" + obj1[key]);
-
-    console.log("key1" + keys2[index]);
-    console.log("value1" + obj2[keys2[index]]);
-
-    if (obj1[key] !== obj2[keys2[index]]) {
-      return false;
-    }
+    // console.log("key1" + key);
+    // console.log("value1" + obj1[key]);
+    // console.log("key1" + keys2[index]);
+    // console.log("value1" + obj2[keys2[index]]);
+    // if (obj1[key] !== obj2[keys2[index]]) {
+    //   return false;
   });
 
   // return true;
