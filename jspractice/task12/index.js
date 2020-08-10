@@ -27,37 +27,36 @@ const obj4 = {
   age: 17,
 };
 
+// const compareObjects = (a, b) => {
+//   const keys1 = Object.keys(a);
+//   const keys2 = Object.keys(b);
+
+//   if (keys1.length !== keys2.length) {
+//     return false;
+//   }
+//   let boolean = true;
+//   keys1.forEach((key) => {
+//     if (a[key] !== b[key]) {
+//       boolean = false;
+//     }
+//   });
+//   return boolean;
+// };
+// console.log(compareObjects(obj1, obj2));
+// console.log(compareObjects(obj2, obj3));
+// console.log(compareObjects(obj1, obj4));
+
+//рефакторинг
 const compareObjects = (a, b) => {
-  //назначить переменные для объектов
   const keys1 = Object.keys(a);
   const keys2 = Object.keys(b);
-  // сравнить длину ключей
+
   if (keys1.length !== keys2.length) {
     return false;
   }
-  // сравнить на соответствие ключи
-  // for (let key of keys1) {
-  //   if (a[key] !== b[key]) {
-  //     return false;
-  //   }
-  // }
-  let boolean = true;
-  keys1.forEach((key) => {
-    // console.log("key1: " + key, "value1: " + obj1[key]);
-    // console.log("value1: " + obj1[key]);
-    // console.log("key2: " + keys2[index], "value2: " + obj2[keys2[index]]);
-    // console.log("value1" + obj2[keys2[index]]);
-    if (a[key] !== b[key]) {
-      boolean = false;
-    }
-  });
-  return boolean;
+  return !keys1.some((key) => a[key] !== b[key]);
 };
+
 console.log(compareObjects(obj1, obj2));
 console.log(compareObjects(obj2, obj3));
 console.log(compareObjects(obj1, obj4));
-
-// console.log(obj1 == obj4);
-// console.log(obj1 === obj4);
-// //сравнение функций
-// console.log((() => {}) === (() => {}));

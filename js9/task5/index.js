@@ -7,6 +7,11 @@
 //input: Object
 //output: massive
 
+//1. copy
+//2. get key-value by Object.entries
+//3. map elements
+//4. sort
+
 "use strict";
 
 const customers = {
@@ -22,11 +27,10 @@ const customers = {
 
 function getCustomersList(obj) {
   let clone = { ...obj };
-  let idForCustomer = Object.keys(clone);
-  let id = { id: idForCustomer };
-  console.log(id);
-  const result = Object.entries(clone).map((el) => el[1]);
+  const result = Object.entries(clone).map((el) => {
+    const res = { ...el[1], id: el[0] };
+    return res;
+  });
   return result.sort((a, b) => a.age - b.age);
 }
-
 console.log(getCustomersList(customers));
