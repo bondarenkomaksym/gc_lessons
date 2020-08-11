@@ -9,26 +9,24 @@
 
 "use strict";
 
-export default function createMessenger() {
-  let message = "Just learn it";
-  let sender = "Gromcode";
-  function sendMessage(name) {
-    console.log(`${name}, ${message}! Your ${sender}`);
+export default function calc(expression) {
+  const [a, operator, b] = expression.split(" ");
+  let result = 0;
+  function normalCalc() {
+    console.log(`${expression} = ${result}`);
   }
-  function setMessage(text) {
-    message = text;
+  function add() {
+    result = +a + +b;
+    return `${expression} = ${result}`;
   }
-  function setSender(text) {
-    sender = text;
-  }
+
   return {
-    sendMessage,
-    setMessage,
-    setSender,
+    normalCalc,
+    add,
   };
 }
-
-// const messenger = createMessenger();
+console.log(calc("6 * 2"));
+// const messenger = calc();
 
 // messenger.sendMessage("Bob");
 // messenger.setMessage("Good job");
