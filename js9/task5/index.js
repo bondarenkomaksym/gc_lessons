@@ -7,7 +7,7 @@
 //input: Object
 //output: massive
 
-//1. copy
+//1. copy - нет мутаций!
 //2. get key-value by Object.entries
 //3. map elements
 //4. sort
@@ -25,12 +25,21 @@ const customers = {
   },
 };
 
-function getCustomersList(obj) {
-  let clone = { ...obj };
-  const result = Object.entries(clone).map((el) => {
-    const res = { ...el[1], id: el[0] };
-    return res;
-  });
-  return result.sort((a, b) => a.age - b.age);
-}
+// function getCustomersList(obj) {
+//   return Object.entries(obj)
+//     .map((el) => {
+//       const res = { ...el[1], id: el[0] };
+//       return res;
+//     })
+//     .sort((a, b) => a.age - b.age);
+// }
+// console.log(getCustomersList(customers));
+
+//рефакторинг
+
+const getCustomersList = (obj) => {
+  return Object.entries(obj)
+    .map((el) => ({ ...el[1], id: el[0] }))
+    .sort((a, b) => a.age - b.age);
+};
 console.log(getCustomersList(customers));
