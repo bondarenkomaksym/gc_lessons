@@ -34,5 +34,5 @@ messenger.sendMessage("Bob");
 messenger.setMessage("Good job");
 messenger.sendMessage("Bob");
 messenger.setMessage("Just learn it");
-messenger.setSender("Gromcode");
 messenger.sendMessage("Bob");
+messenger.setSender("Gromcode");
