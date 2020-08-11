@@ -4,36 +4,28 @@
 // 3. Create prototype solution & testing - черновое решение
 // 4. Final testing & refactoring -> final solution
 
-//input: strings
-//output:
+//input: number
+//output: number
 
 "use strict";
 
-export default function calc(expression) {
-  const [a, operator, b] = expression.split(" ");
-  let result = 0;
-  function normalCalc() {
-    console.log(`${expression} = ${result}`);
-  }
-  function add() {
-    result = +a + +b;
-    return `${expression} = ${result}`;
-  }
+let memory = 0;
 
-  return {
-    normalCalc,
-    add,
-  };
+export function add(num) {
+  return (memory += num);
 }
-console.log(calc("6 * 2"));
-// const messenger = calc();
 
-// messenger.sendMessage("Bob");
-// messenger.setMessage("Good job");
-// messenger.sendMessage("Bob");
+export function decrease(num) {
+  return (memory -= num);
+}
 
-// const messenger1 = createMessenger();
-
-// messenger1.setMessage("Just learn it");
-// messenger1.setSender("Gromcode");
-// messenger1.sendMessage("Bob");
+export function reset() {
+  return (memory = 0);
+}
+export function getMemo() {
+  return memory;
+}
+// console.log(add(5));
+// console.log(decrease(9));
+// console.log(reset());
+// console.log(getMemo());
