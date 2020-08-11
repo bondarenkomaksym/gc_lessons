@@ -33,10 +33,9 @@ const messenger = createMessenger();
 messenger.sendMessage("Bob");
 messenger.setMessage("Good job");
 messenger.sendMessage("Bob");
+
 const messenger1 = createMessenger();
 
 messenger1.setMessage("Just learn it");
-
 messenger1.setSender("Gromcode");
-// const messenger2 = createMessenger();
 messenger1.sendMessage("Bob");
