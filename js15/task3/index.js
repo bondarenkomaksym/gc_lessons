@@ -4,8 +4,8 @@
 // 3. Create prototype solution & testing - черновое решение
 // 4. Final testing & refactoring -> final solution
 
-//input:
-//output:
+//input: string
+//output: massive
 
 "use strict";
 
@@ -20,7 +20,6 @@ export function createLogger() {
       return memory.sort((a, b) => b.dateTime - a.dateTime);
     }
   }
-
   function warn(elem) {
     memory.push({
       message: elem,
@@ -28,7 +27,20 @@ export function createLogger() {
       type: "warn",
     });
   }
-
+  function error(elem) {
+    memory.push({
+      message: elem,
+      dateTime: new Date(),
+      type: "error",
+    });
+  }
+  function log(elem) {
+    memory.push({
+      message: elem,
+      dateTime: new Date(),
+      type: "log",
+    });
+  }
   return {
     warn,
     error,
@@ -36,11 +48,11 @@ export function createLogger() {
     getRecords,
   };
 }
-// const logger = createLogger();
-// logger.warn("User try to restricted page");
-// logger.error("Unexpected error on the site");
-// logger.log("User logged in");
-// logger.log("User logged out");
+const logger = createLogger();
+logger.warn("User try to restricted page");
+logger.error("Unexpected error on the site");
+logger.log("User logged in");
+logger.log("User logged out");
 // console.log(logger.getRecords());
 // console.log(logger.getRecords("log"));
 // console.log(logger.getRecords("warn"));
