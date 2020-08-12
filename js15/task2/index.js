@@ -34,3 +34,8 @@ export function createCalculator() {
     getMemo,
   };
 }
+
+const add = createCalculator();
+const decrease = createCalculator();
+const reset = createCalculator();
+const getMemo = createCalculator();
