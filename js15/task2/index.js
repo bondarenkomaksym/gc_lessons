@@ -13,18 +13,18 @@ export function createCalculator() {
   let memory = 0;
 
   function add(num) {
-    memory += num;
+    return (memory += num);
   }
 
   function decrease(num) {
-    memory -= num;
+    return (memory -= num);
   }
 
   function reset() {
-    memory = 0;
+    return (memory = 0);
   }
   function getMemo() {
-    memory;
+    return memory;
   }
 
   return {
@@ -39,3 +39,5 @@ const add = createCalculator();
 const decrease = createCalculator();
 const reset = createCalculator();
 const getMemo = createCalculator();
+
+// console.log(add.add(5));
