@@ -21,4 +21,5 @@ function bar() {
 
 var foo = bar();
 
+export { foo };
 // console.log(bar());
