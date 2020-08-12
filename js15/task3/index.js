@@ -30,17 +30,18 @@ export function createLogger() {
       return memory;
     }
   }
-  // console.log(getRecords());
-  function warn() {
+  function warn(arg) {
+    if ((arg = "User try to restricted page")) return memory[2];
     return memory[2];
   }
 
-  function error() {
-    return memory[0];
+  function error(arg) {
+    if ((arg = "User try to restricted page")) return memory[0];
   }
 
-  function log() {
-    return memory[(1, 3)];
+  function log(arg) {
+    if ((arg = "User logged in")) return memory[3];
+    else return memory[1];
   }
 
   return {
@@ -52,6 +53,12 @@ export function createLogger() {
 }
 
 const logger = createLogger();
-// logger.log("User logged out");
+logger.log("User logged in");
+logger.warn("User try to restricted page");
+logger.log("User logged out");
+logger.error("Unexpected error on the site");
 logger.getRecords();
-// logger.getRecords("log");
+logger.getRecords("log");
+logger.getRecords("error");
+logger.getRecords("warn");
+// console.log(logger.getRecords());
