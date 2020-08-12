@@ -10,31 +10,25 @@
 "use strict";
 
 export function createLogger() {
-  let memory = [
-    {
-      message: "Unexpected error on the site",
-      type: "error",
-      dateTime: new Date(),
-    },
-    { message: "User logged out", type: "log", dateTime: new Date() },
-    {
-      message: "User try to restricted page",
-      type: "warn",
-      dateTime: new Date(),
-    },
-    { message: "User logged in", type: "log", dateTime: new Date() },
-  ];
+  let memory = [];
 
   function getRecords() {
     if (arguments.length === 0) {
       return memory;
+    }
+    if (type !== undefined) {
+      let result = memory.filter((el) => el.type === type);
+      return result;
     } else {
-      return [];
+      return memory.sort((a, b) => b.dateTime - a.dateTime);
     }
   }
-  function warn(arg) {
-    if ((arg = "User try to restricted page")) return memory[2];
-    return memory[2];
+  function warn(elem) {
+    memory.push({
+      message: elem,
+      dateTime: new Date(),
+      type: "warn",
+    });
   }
 
   function error(arg) {
@@ -63,4 +57,19 @@ logger.getRecords();
 logger.getRecords("log");
 logger.getRecords("error");
 logger.getRecords("warn");
-// console.log(logger.getRecords());
+console.log(logger.getRecords());
+
+// [
+//   {
+//     message: "Unexpected error on the site",
+//     type: "error",
+//     dateTime: new Date(),
+//   },
+//   { message: "User logged out", type: "log", dateTime: new Date() },
+//   {
+//     message: "User try to restricted page",
+//     type: "warn",
+//     dateTime: new Date(),
+//   },
+//   { message: "User logged in", type: "log", dateTime: new Date() },
+// ];
