@@ -4,20 +4,21 @@
 // 3. Create prototype solution & testing - черновое решение
 // 4. Final testing & refactoring -> final solution
 
-//input:
+//input: number
 //output:
 
 "use strict";
-// var arr = [];
 
-export function createArrayOfFunctions() {
+export function createArrayOfFunctions(n) {
   let arr = [];
-  for (let i = 0; i < 10; i++) {
+  if (n === undefined) return arr;
+  if (typeof n !== "number") return null;
+  for (let i = 0; i < n; i++) {
     arr[i] = function () {
       return i;
     };
   }
   return arr;
 }
-// export { arr };
-console.log(createArrayOfFunctions(9));
+
+console.log(createArrayOfFunctions(3));
