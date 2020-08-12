@@ -19,7 +19,6 @@ function bar() {
   return foo;
 }
 
-var foo = bar();
+export var foo = bar();
 
-export { foo };
 // console.log(bar());
