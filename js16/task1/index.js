@@ -8,13 +8,13 @@
 //output:
 
 "use strict";
-var arr = [];
 
-for (let i = 0; i < 10; i++) {
-  arr[i] = function () {
-    return i;
-  };
+let a = 17;
+
+if (a) {
+  let a = 1;
+
+  console.log(a);
 }
 
-// export { arr };
-console.log(arr);
+console.log(a);
