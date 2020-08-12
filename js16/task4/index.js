@@ -9,7 +9,7 @@
 
 "use strict";
 
-var foo = 1;
+let foo = 1;
 
 function bar() {
   if (!foo) {
@@ -19,6 +19,6 @@ function bar() {
   return foo;
 }
 
-var foo = bar();
+foo = bar();
 
-// console.log(bar());
+console.log(bar());
