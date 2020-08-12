@@ -28,6 +28,8 @@ export function createLogger() {
   function getRecords() {
     if (arguments.length === 0) {
       return memory;
+    } else {
+      return [];
     }
   }
   function warn(arg) {
