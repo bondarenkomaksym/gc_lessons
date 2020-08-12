@@ -11,18 +11,16 @@
 
 export function createLogger() {
   let memory = [];
-
-  function getRecords() {
-    if (arguments.length === 0) {
-      return memory;
-    }
+  function getRecords(type) {
     if (type !== undefined) {
-      let result = memory.filter((el) => el.type === type);
-      return result;
+      return memory
+        .filter((el) => el.type === type)
+        .sort((a, b) => b.dateTime - a.dateTime);
     } else {
       return memory.sort((a, b) => b.dateTime - a.dateTime);
     }
   }
+
   function warn(elem) {
     memory.push({
       message: elem,
@@ -31,45 +29,19 @@ export function createLogger() {
     });
   }
 
-  function error(arg) {
-    if ((arg = "User try to restricted page")) return memory[0];
-  }
-
-  function log(arg) {
-    if ((arg = "User logged in")) return memory[3];
-    else return memory[1];
-  }
-
   return {
-    getRecords,
     warn,
     error,
     log,
+    getRecords,
   };
 }
-
-const logger = createLogger();
-logger.log("User logged in");
-logger.warn("User try to restricted page");
-logger.log("User logged out");
-logger.error("Unexpected error on the site");
-logger.getRecords();
-logger.getRecords("log");
-logger.getRecords("error");
-logger.getRecords("warn");
-console.log(logger.getRecords());
-
-// [
-//   {
-//     message: "Unexpected error on the site",
-//     type: "error",
-//     dateTime: new Date(),
-//   },
-//   { message: "User logged out", type: "log", dateTime: new Date() },
-//   {
-//     message: "User try to restricted page",
-//     type: "warn",
-//     dateTime: new Date(),
-//   },
-//   { message: "User logged in", type: "log", dateTime: new Date() },
-// ];
+// const logger = createLogger();
+// logger.warn("User try to restricted page");
+// logger.error("Unexpected error on the site");
+// logger.log("User logged in");
+// logger.log("User logged out");
+// console.log(logger.getRecords());
+// console.log(logger.getRecords("log"));
+// console.log(logger.getRecords("warn"));
+// console.log(logger.getRecords("error"));
