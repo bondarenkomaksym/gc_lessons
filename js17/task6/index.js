@@ -69,8 +69,11 @@ function getPopulation(population) {
  * используйте ф-цию getPopulation и .bind с нужным объектом и аргументами
  * getUkrainePopulation не должна принимать ни одного аргумента
  */
-const population = getPopulation.bind(country, [43000])();
-console.log(population);
+
+const getUkrainePopulation = getPopulation.bind(country, [43000]);
+getUkrainePopulation();
+console.log(getUkrainePopulation());
+export { getUkrainePopulation };
 
 /* ===> 4 <=== */
 const transaction = {
