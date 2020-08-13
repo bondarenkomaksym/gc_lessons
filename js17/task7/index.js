@@ -15,7 +15,13 @@ const user = {
   getFullName() {
     return `${this.firstName} ${this.lastName}`;
   },
+  setFullName() {
+    return this.getFullName();
+  },
 };
 
+// console.log(user.getFullName());
+// console.log(user.setFullName());
 user.getFullName();
+user.setFullName();
 export { user };
