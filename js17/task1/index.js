@@ -33,4 +33,4 @@ const user = {
   },
 };
 
-user.getFullName();
+export default user.getFullName();
