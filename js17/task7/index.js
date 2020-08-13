@@ -16,12 +16,12 @@ const user = {
     return `${this.firstName} ${this.lastName}`;
   },
   setFullName() {
-    return this.getFullName.bind(this)();
+    this.getFullName.bind(this)();
   },
 };
 
-// console.log(user.getFullName());
-// console.log(user.setFullName());
+console.log(user.getFullName());
+console.log(user.setFullName());
 user.getFullName();
 user.setFullName();
 export { user };
