@@ -101,4 +101,9 @@ const anotherTransaction = {
  * используйте метод transaction.printTransaction и .bind с нужным объектом
  * printSpecialTransaction не должна принимать ни одного аргумента
  */
-transaction.printTransaction.bind(anotherTransaction)();
+
+const printSpecialTransaction = transaction.printTransaction.bind(
+  anotherTransaction
+);
+printSpecialTransaction();
+export { printSpecialTransaction };
