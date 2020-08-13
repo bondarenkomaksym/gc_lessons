@@ -26,20 +26,21 @@ student.f();
 student.f.call({ name: "Bruce" });
 
 /* ===> 2 <=== */
-// const company = {
-//   companyName: "Microsoft",
-// };
+const company = {
+  companyName: "Microsoft",
+};
 
-// function greeting(firstName, lastName) {
-//   console.log(
-//     `Hello, ${firstName} ${lastName}. Welcome to the ${this.companyName}`
-//   );
-// }
+function greeting(firstName, lastName) {
+  console.log(
+    `Hello, ${firstName} ${lastName}. Welcome to the ${this.companyName}`
+  );
+}
 
 // вызовите ф-цию greeting так, чтобы в консоль вывелось
 // 'Hello, Bob Marley. Welcome to the Microsoft'
 // используйте объект company
-// ... your code here
+company.f = greeting;
+company.f(`Bob`, `Marley`);
 
 /* ===> 3 <=== */
 // const country = {
