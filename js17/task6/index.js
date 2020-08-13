@@ -26,10 +26,13 @@ function sayName() {
  * создайте ф-цию sayBruceName которая будет выводить в консоль имя 'Bruce'
  * используйте ф-цию sayName и .bind с нужным объектом
  */
-export const sayStudentName = sayName;
-sayStudentName.bind(student)();
-export const sayBruceName = sayName;
-sayBruceName.bind({ name: "Bruce" })();
+
+const sayStudentName = sayName.bind(student);
+sayStudentName();
+const sayBruceName = sayName.bind({ name: "Bruce" });
+export default sayBruceName();
+// export const sayBruceName = sayName;
+// sayBruceName.bind({ name: "Bruce" })();
 /* ===> 2 <=== */
 const company = {
   companyName: "Microsoft",
