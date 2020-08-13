@@ -17,10 +17,7 @@ const user = {
   },
   setFullName() {
     let split = this.getFullName().split(" ");
-    return (
-      user.getFullName.bind((this.firstName = split[0])),
-      user.getFullName.bind((this.lastName = split[1]))
-    );
+    return (this.firstName = split[0]), (this.lastName = split[1]);
   },
 };
 // console.log(user.getFullName());
