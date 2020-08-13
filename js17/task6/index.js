@@ -29,10 +29,10 @@ function sayName() {
 
 const sayStudentName = sayName.bind(student);
 sayStudentName();
+
 const sayBruceName = sayName.bind({ name: "Bruce" });
-export default sayBruceName();
-// export const sayBruceName = sayName;
-// sayBruceName.bind({ name: "Bruce" })();
+sayBruceName();
+export { sayStudentName, sayBruceName };
 /* ===> 2 <=== */
 const company = {
   companyName: "Microsoft",
