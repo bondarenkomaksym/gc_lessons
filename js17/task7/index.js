@@ -16,7 +16,7 @@ const user = {
     return `${this.firstName} ${this.lastName}`;
   },
   setFullName() {
-    return this.getFullName();
+    return this.getFullName.bind(this)();
   },
 };
 
