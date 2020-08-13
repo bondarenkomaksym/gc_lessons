@@ -21,7 +21,7 @@ export function sayName() {
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя студента
 student.f = sayName;
 student.f();
-
+// student.sayName.call();
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя 'Bruce' (используйте другой объект)
 student.f.call({ name: "Bruce" });
 
@@ -39,8 +39,8 @@ function greeting(firstName, lastName) {
 // вызовите ф-цию greeting так, чтобы в консоль вывелось
 // 'Hello, Bob Marley. Welcome to the Microsoft'
 // используйте объект company
-company.f = greeting;
-company.f(`Bob`, `Marley`);
+
+greeting.call(company, "Bob", "Marley");
 
 /* ===> 3 <=== */
 const country = {
