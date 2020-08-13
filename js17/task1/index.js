@@ -29,7 +29,7 @@ const user = {
   lastName: "Doe",
   //если это метод объекта, то "function" можно убрать
   getFullName() {
-    console.log(`${this.firstName} ${this.lastName}`);
+    return `${this.firstName} ${this.lastName}`;
   },
 };
 
