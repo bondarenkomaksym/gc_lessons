@@ -43,21 +43,22 @@ company.f = greeting;
 company.f(`Bob`, `Marley`);
 
 /* ===> 3 <=== */
-// const country = {
-//   countryName: "Ukraine",
-//   capital: "Kyiv",
-// };
+const country = {
+  countryName: "Ukraine",
+  capital: "Kyiv",
+};
 
-// function getPopulation(population) {
-//   return `Population in ${this.countryName} is ${population}`;
-// }
+function getPopulation(population) {
+  return `Population in ${this.countryName} is ${population}`;
+}
 
 // вызовите ф-цию getPopulation так, чтобы она вернула
 // 'Population in Ukraine is 43000'
 // 43000 передавайте в виде числа
 // используйте объект country
 // результат работы ф-ции getPopulation присвойте в переменную и выведите в консоль
-// ... your code here
+// country.f = getPopulation;
+console.log(getPopulation.call(656544));
 
 /* ===> 4 <=== */
 // const transaction = {
