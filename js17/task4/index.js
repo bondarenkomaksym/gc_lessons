@@ -58,7 +58,8 @@ function getPopulation(population) {
 // используйте объект country
 // результат работы ф-ции getPopulation присвойте в переменную и выведите в консоль
 // country.f = getPopulation;
-console.log(getPopulation.call(656544));
+const population = getPopulation.call(country, 43000);
+console.log(population);
 
 /* ===> 4 <=== */
 // const transaction = {
