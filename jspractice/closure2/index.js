@@ -1,8 +1,33 @@
+//input: none
+//output: object
+
 "use strict";
 
 const createLogger = () => {
   const records = [];
+
   return {
+    getRecords(type) {
+      //input: string
+      //output: array
+      //algo
+      //1. check if input -> filter ++
+      //2. return all records ++
+      //3. sort ++
+
+      return (type
+        ? records.filter((message) => message.type === type)
+        : records
+      ).sort((a, b) => b.dateTime - a.dateTime);
+      //черновик
+      // if (type) {
+      //   return records
+      //     .filter((message) => message.type === type)
+      //     .sort((a, b) => b.dateTime - a.dateTime);
+      // } else {
+      //   return records.sort((a, b) => b.dateTime - a.dateTime);
+      // }
+    },
     warn(message) {
       records.push({
         message,
@@ -26,12 +51,17 @@ const createLogger = () => {
     },
   };
 };
-const logger = createLogger();
-logger.warn("User try to restricted page");
-logger.error("Unexpected error on the site");
-logger.log("User logged in");
-logger.log("User logged out");
-// console.log(logger.getRecords());
-// console.log(logger.getRecords("log"));
-// console.log(logger.getRecords("warn"));
-// console.log(logger.getRecords("error"));
+
+const logger1 = createLogger();
+// console.log(logger1.warn("User try to restricted page"));
+// logger.error("Unexpected error on the site");
+// logger.log("User logged in");
+console.log(logger1);
+logger1.warn("User try to restricted page");
+logger1.error("er");
+logger1.log("User logged in");
+console.log(logger1.getRecords());
+console.log(logger1.getRecords("error"));
+console.log(logger1.getRecords("log"));
+
+const logger2 = createLogger();
