@@ -19,11 +19,11 @@ export function sayName() {
 }
 
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя студента
-student.f = sayName;
-student.f();
-// student.sayName.call();
+// student.f = sayName;
+// student.f();
+sayName.call(student);
 // вызовите ф-цию sayName так, чтобы в консоль вывелось имя 'Bruce' (используйте другой объект)
-student.f.call({ name: "Bruce" });
+sayName.call({ name: "Bruce" });
 
 /* ===> 2 <=== */
 const company = {
