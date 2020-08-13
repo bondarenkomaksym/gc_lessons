@@ -29,7 +29,6 @@ function sayName() {
 
 const sayStudentName = sayName.bind(student);
 sayStudentName();
-
 const sayBruceName = sayName.bind({ name: "Bruce" });
 sayBruceName();
 export { sayStudentName, sayBruceName };
@@ -50,8 +49,9 @@ function greeting(firstName, lastName) {
  * используйте ф-цию greeting и .bind с нужным объектом и аргументами
  * specialGreeting не должна принимать ни одного аргумента
  */
-greeting.bind(company, "Bob", "Marley")();
-
+const specialGreeting = greeting.bind(company, "Bob", "Marley");
+specialGreeting();
+export { specialGreeting };
 /* ===> 3 <=== */
 const country = {
   countryName: "Ukraine",
