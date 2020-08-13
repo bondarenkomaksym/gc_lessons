@@ -11,43 +11,42 @@
 
 export function createLogger() {
   let memory = [];
-  function getRecords(type) {
-    if (type !== undefined) {
-      return memory
-        .filter((el) => el.type === type)
-        .sort((a, b) => b.dateTime - a.dateTime);
-    } else {
-      return memory.sort((a, b) => b.dateTime - a.dateTime);
-    }
-  }
-  function warn(elem) {
-    memory.push({
-      message: elem,
-      dateTime: new Date(),
-      type: "warn",
-    });
-  }
-  function error(elem) {
-    memory.push({
-      message: elem,
-      dateTime: new Date(),
-      type: "error",
-    });
-  }
-  function log(elem) {
-    memory.push({
-      message: elem,
-      dateTime: new Date(),
-      type: "log",
-    });
-  }
+
   return {
-    warn,
-    error,
-    log,
-    getRecords,
+    getRecords(type) {
+      if (type !== undefined) {
+        return memory
+          .filter((el) => el.type === type)
+          .sort((a, b) => b.dateTime - a.dateTime);
+      } else {
+        return memory.sort((a, b) => b.dateTime - a.dateTime);
+      }
+    },
+
+    warn(elem) {
+      memory.push({
+        message: elem,
+        dateTime: new Date(),
+        type: "warn",
+      });
+    },
+    error(elem) {
+      memory.push({
+        message: elem,
+        dateTime: new Date(),
+        type: "error",
+      });
+    },
+    log(elem) {
+      memory.push({
+        message: elem,
+        dateTime: new Date(),
+        type: "log",
+      });
+    },
   };
 }
+
 const logger = createLogger();
 logger.warn("User try to restricted page");
 logger.error("Unexpected error on the site");
