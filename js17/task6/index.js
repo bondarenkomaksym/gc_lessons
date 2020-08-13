@@ -14,7 +14,7 @@ const student = {
   name: "Tom",
 };
 
-export function sayName() {
+function sayName() {
   console.log(this.name);
 }
 /*
@@ -26,9 +26,9 @@ export function sayName() {
  * создайте ф-цию sayBruceName которая будет выводить в консоль имя 'Bruce'
  * используйте ф-цию sayName и .bind с нужным объектом
  */
-const sayStudentName = sayName;
+export const sayStudentName = sayName;
 sayStudentName.bind(student)();
-const sayBruceName = sayName;
+export const sayBruceName = sayName;
 sayBruceName.bind({ name: "Bruce" })();
 /* ===> 2 <=== */
 const company = {
