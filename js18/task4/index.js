@@ -14,7 +14,7 @@ function saveCalls(innerfunc) {
   withMemory.calls = [];
   function withMemory() {
     withMemory.call.push([...arguments]);
-    return innerfunc.call(this);
+    return innerfunc.call(this, arguments);
   }
   return withMemory;
 }
