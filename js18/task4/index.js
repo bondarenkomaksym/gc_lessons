@@ -13,8 +13,8 @@ function saveCalls(innerfunc) {
   //создаётся массив calls с аргументами с которыми вызвана withMemory
   withMemory.calls = [];
   function withMemory() {
-    withMemory.call.push([...arguments]);
-    return innerfunc.call(this, arguments);
+    withMemory.calls.push([...arguments]);
+    return innerfunc.call(this);
   }
   return withMemory;
 }
