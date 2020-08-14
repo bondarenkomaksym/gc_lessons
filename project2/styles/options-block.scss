@@ -1,0 +1,27 @@
+.price-card {
+  &__options-list {
+    margin-top: 40px;
+  }
+
+  &__options-line:nth-child(odd) {
+    background-color: #2a3438;
+  }
+
+  &__options-line {
+    display: flex;
+    align-items: center;
+    width: 380px;
+    height: 50px;
+
+    & span {
+      margin-left: 22px;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+
+  &__options-img {
+    margin-left: 22px;
+  }
+}

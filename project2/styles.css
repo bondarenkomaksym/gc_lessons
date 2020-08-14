@@ -1,0 +1,130 @@
+.price-card {
+  display: flex;
+  margin: 0 auto;
+  min-width: 380px;
+  height: 770px;
+  margin: 9px;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #334247;
+  color: white;
+  overflow: hidden;
+}
+.price-card__title {
+  margin-top: 33px;
+  font-size: 35px;
+  line-height: 43px;
+  font-weight: 700;
+}
+.price-card__price {
+  display: flex;
+  margin-top: 33px;
+  width: 380px;
+  height: 105px;
+}
+.price-card__website {
+  font-size: 20px;
+  line-height: 24px;
+}
+.price-card__euro {
+  margin: auto;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 67px;
+}
+.price-card__description {
+  display: flex;
+  margin-top: 40px;
+}
+.price-card__description span {
+  width: 327px;
+  text-align: center;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+}
+.price-card__order-btn {
+  margin-top: 39px;
+  width: 154px;
+  height: 40px;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+}
+.price-card__order-btn span {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+}
+
+.price-card__options-list {
+  margin-top: 40px;
+}
+.price-card__options-line:nth-child(odd) {
+  background-color: #2a3438;
+}
+.price-card__options-line {
+  display: flex;
+  align-items: center;
+  width: 380px;
+  height: 50px;
+}
+.price-card__options-line span {
+  margin-left: 22px;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+}
+.price-card__options-img {
+  margin-left: 22px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  background-color: #141b1c;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#green {
+  background-color: #5bb189;
+}
+
+#blue {
+  background-color: #3a6ba5;
+}
+
+#orange {
+  background-color: #ec632a;
+}
+
+.badge {
+  display: flex;
+  position: absolute;
+  left: 263px;
+  top: 30px;
+  width: 147px;
+  height: 25px;
+  transform: rotate(45deg);
+  background-color: #dc3f45;
+  z-index: 5;
+}
+.badge span {
+  margin: auto;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+/*# sourceMappingURL=styles.css.map */

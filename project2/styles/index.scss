@@ -1,0 +1,44 @@
+@import "./pricecard.scss";
+@import "./options-block.scss";
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+  background-color: #141b1c;
+}
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#green {
+  background-color: #5bb189;
+}
+#blue {
+  background-color: #3a6ba5;
+}
+#orange {
+  background-color: #ec632a;
+}
+.badge {
+  display: flex;
+  position: absolute;
+  left: 263px;
+  top: 30px;
+  width: 147px;
+  height: 25px;
+  transform: rotate(45deg);
+  background-color: #dc3f45;
+  z-index: 5;
+
+  & span {
+    margin: auto;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
