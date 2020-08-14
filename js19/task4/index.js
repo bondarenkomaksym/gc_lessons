@@ -24,3 +24,5 @@ const user = {
 
 user.fullName = "John Doe";
 console.log(user.fullName);
+
+export { user };
