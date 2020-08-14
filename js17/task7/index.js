@@ -15,13 +15,11 @@ const user = {
   getFullName() {
     return `${this.firstName} ${this.lastName}`;
   },
-  setFullName() {
-    let split = this.getFullName().split(" ");
-    return (this.firstName = split[0]) + " " + (this.lastName = split[1]);
+  setFullName(getFullName) {
+    let newN = getFullName.split(" ");
+    this.firstName = newN[0];
+    this.lastName = newN[1];
   },
 };
-console.log(user.getFullName());
-console.log(user.setFullName());
-user.getFullName();
-user.setFullName();
+
 export { user };
