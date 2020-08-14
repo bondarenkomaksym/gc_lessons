@@ -8,11 +8,28 @@
 // let message = "Hoisting is here!";
 
 //hoisting example 2
-// var a = "test";
+
+// Global env = {
+// enviromentrecord: {
+//     a: num
+//   }
+//   outer: null
+// }
+//
+
+// var a = 17;
 // console.log(a);
 
 // if (a) {
-//   var a = 1;
+// Global env = {
+// enviromentrecord: {
+//      a: num
+//   }
+//   outer: global
+// }
+//
+// }
+//   let a = 1;
 
 //   console.log(a);
 // }
@@ -24,9 +41,42 @@ var a = 77;
 console.log(a);
 
 function print() {
+  //var не всплывает из функции
   var a = 2;
   console.log(a);
 }
 print();
 
 console.log(a);
+
+//scope example
+
+// Global env = {
+// enviromentrecord: {
+//     a: num
+//   }
+//   outer: null
+// }
+//
+
+// let a = 5;
+
+// for (let i = 0; i < 2; i++) {
+//   console.log(i);
+//   a++;
+//   console.log(a);
+
+//   let b = 10;
+//   b++;
+
+// Global env = {
+// enviromentrecord: {
+//     i: num,
+//     b: num,
+//   }
+//   outer: global
+// }
+//
+// }
+
+// console.log(b);
