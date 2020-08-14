@@ -4,8 +4,8 @@
 // 3. Create prototype solution & testing - черновое решение
 // 4. Final testing & refactoring -> final solution
 
-//input:
-//output:
+//input: numbers
+//output: sumOfSquares
 
 "use strict";
 
