@@ -21,7 +21,7 @@ const event = {
       .filter(({ age }) => age >= 18)
       .map(({ name, email }) => ({
         email,
-        message: `Dear ${name}!, ${this.message}!`,
+        message: `Dear ${name}! ${this.message}!`,
       }));
   },
 };
