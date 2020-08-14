@@ -15,13 +15,13 @@ const event = {
     { name: "Bob", age: 24, email: "b@server.com" },
     { name: "Tom", age: 15, email: "t@server.com" },
   ],
-  message: "Welcome to the party",
+  message: "Welcome to the party!",
   getInvitations() {
     return this.guests
       .filter(({ age }) => age >= 18)
       .map(({ name, email }) => ({
         email,
-        message: `Dear ${name}! ${this.message}!`,
+        message: `Dear ${name}! ${this.message}`,
       }));
   },
 };
