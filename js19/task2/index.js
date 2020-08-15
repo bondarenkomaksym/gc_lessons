@@ -37,7 +37,7 @@ Object.setPrototypeOf(ship, vehicle);
 function getOwnProps(ship) {
   const arrProps = [];
   for (let prop in ship) {
-    //возвращаем только свойства без методов
+    //возвращаем только свойства без методов...
     if (ship.hasOwnProperty(prop) && typeof ship[prop] !== "function") {
       arrProps.push(prop);
     }
