@@ -26,7 +26,7 @@ class User {
       return false;
     }
 
-    if (age >= 0) {
+    if (age >= 25) {
       console.log(`New photo request was sent for ${this.name}`);
     }
     return age;
