@@ -38,5 +38,5 @@ class User {
 
 const user = new User("John", 26);
 console.log(user);
-
+// console.log(User.createEmpty());
 export { User };
