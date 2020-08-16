@@ -31,14 +31,12 @@ class User {
     }
     return age;
   }
-  createEmpty(name, age) {
-    this.name = name;
-    this.age = age;
+  static createEmpty() {
+    return new this("", null);
   }
 }
 
 const user = new User("John", 26);
-user.createEmpty("", null);
 console.log(user);
 
 export { User };
