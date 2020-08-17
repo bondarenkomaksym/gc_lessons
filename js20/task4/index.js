@@ -20,20 +20,24 @@ class Order {
     this.type = type;
   }
   checkPrice() {
-    this.price > 1000 ? true : false;
+    if (this.price > 1000) {
+      return true;
+    }
+    return false;
   }
   confirmOrder() {
     this.isConfirmed = true;
     this.dateConfirmed = new Date();
   }
   isValidType() {
-    this.type == "Buy" || this.type == "Sell" ? true : false;
+    this.type === "Buy" || this.type === "Sell" ? true : false;
   }
 }
 
-const order = new Order(1005, "Berlin", "Sell");
-
-console.log(order);
-order.checkPrice();
+const order = new Order(800, "Berlin", "Sell");
+console.log(order.isValidType());
+console.log(order.checkPrice());
 order.confirmOrder();
+console.log(order);
+
 export { Order };
