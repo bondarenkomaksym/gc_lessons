@@ -28,7 +28,7 @@ class User {
 
 class UserRepository {
   constructor(users) {
-    let users = [];
+    this._users = Object.freeze(users);
   }
   get users() {
     return this._users;
@@ -46,4 +46,4 @@ class UserRepository {
   }
 }
 
-export { User };
+export { User, UserRepository };
