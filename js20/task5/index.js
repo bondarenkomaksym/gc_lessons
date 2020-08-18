@@ -40,9 +40,9 @@ class UserRepository {
     return this._users.map((el) => el._id);
   }
   getUserNameById(id) {
-    this._users.map((user) => {
-      return user.name.includes(user.id === id);
-    });
+    for (let i of this._users) {
+      return i.id === id ? i.name : null;
+    }
   }
 }
 
