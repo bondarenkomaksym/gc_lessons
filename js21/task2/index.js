@@ -14,10 +14,11 @@ const getTitleElement = () => {
   console.dir(titleElement);
   return titleElement;
 };
-
+getTitleElement();
 const getInputElement = () => {
   const inputElement = document.querySelector("input", "text");
   console.dir(inputElement);
   return inputElement;
 };
+getInputElement();
 export { getTitleElement, getInputElement };
