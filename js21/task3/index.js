@@ -22,4 +22,4 @@ const getItemsArray = () => {
   return Array.from(elementsArray);
 };
 getItemsArray();
-// export { getTitleElement, getInputElement };
+export { getItemsList, getItemsArray };
