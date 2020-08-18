@@ -11,25 +11,25 @@
 
 const getTitle = () => {
   const elementsList = document.querySelector(".title");
-  return elementsList;
+  return elementsList.textContent;
 };
 getTitle();
 
 const getDescription = () => {
   const elementsList = document.querySelector(".about");
-  return elementsList;
+  return elementsList.innerText;
 };
 getDescription();
 
 const getPlans = () => {
   const elementsList = document.querySelector(".plans");
-  return elementsList;
+  return elementsList.innerHTML;
 };
 getPlans();
 
 const getGoal = () => {
   const elementsList = document.querySelector(".goal");
-  return elementsList;
+  return elementsList.outerHTML;
 };
 getGoal();
 
