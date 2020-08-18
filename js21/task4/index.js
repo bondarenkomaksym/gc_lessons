@@ -11,28 +11,24 @@
 
 const getTitle = () => {
   const elementsList = document.querySelector(".title");
-  console.dir(elementsList.textContent);
   return elementsList;
 };
 getTitle();
 
 const getDescription = () => {
   const elementsList = document.querySelector(".about");
-  console.dir(elementsList.innerText);
   return elementsList;
 };
 getDescription();
 
 const getPlans = () => {
   const elementsList = document.querySelector(".plans");
-  console.dir(elementsList.innerHTML);
   return elementsList;
 };
 getPlans();
 
 const getGoal = () => {
   const elementsList = document.querySelector(".goal");
-  console.dir(elementsList.outerHTML);
   return elementsList;
 };
 getGoal();
