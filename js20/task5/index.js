@@ -33,13 +33,13 @@ class UserRepository {
   get users() {
     return this._users;
   }
-  get UsersNames() {
+  getUsersNames() {
     return this.users.map((user) => user._name);
   }
-  get UsersIds() {
+  getUsersIds() {
     return this.users.map((user) => user._id);
   }
-  get UserNameById(id) {
+  getUserNameById(id) {
     return this.users.map((user) => {
       return user.name.includes(id);
     });
