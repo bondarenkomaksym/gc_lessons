@@ -33,11 +33,11 @@ class UserRepository {
   get users() {
     return this._users;
   }
-  getUsersNames() {
-    return this.users.map((user) => user._name);
+  getUserNames() {
+    return this._users.map((el) => el._name);
   }
-  getUsersIds() {
-    return this.users.map((user) => user._id);
+  getUserIds() {
+    return this._users.map((el) => el._id);
   }
   getUserNameById(id) {
     return this.users.map((user) => {
