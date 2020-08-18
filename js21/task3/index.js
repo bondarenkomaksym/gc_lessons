@@ -18,8 +18,9 @@ getItemsList();
 
 const getItemsArray = () => {
   const elementsArray = document.querySelectorAll(".tool");
-  console.dir(elementsArray);
+  console.dir(Array.from(elementsArray));
   return Array.from(elementsArray);
 };
 getItemsArray();
+
 export { getItemsList, getItemsArray };
