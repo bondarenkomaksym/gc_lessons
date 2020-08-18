@@ -30,6 +30,20 @@ class UserRepository {
   constructor(users) {
     let users = [];
   }
+  get users() {
+    return this._users;
+  }
+  get UsersNames() {
+    return this.users.map((user) => user._name);
+  }
+  get UsersIds() {
+    return this.users.map((user) => user._id);
+  }
+  get UserNameById(id) {
+    return this.users.map((user) => {
+      return user.name.includes(id);
+    });
+  }
 }
 
-// export { User };
+export { User };
