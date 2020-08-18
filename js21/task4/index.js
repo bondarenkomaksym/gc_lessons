@@ -13,24 +13,20 @@ const getTitle = () => {
   const elementsList = document.querySelector(".title");
   return elementsList.textContent;
 };
-getTitle();
 
 const getDescription = () => {
   const elementsList = document.querySelector(".about");
   return elementsList.innerText;
 };
-getDescription();
 
 const getPlans = () => {
   const elementsList = document.querySelector(".plans");
   return elementsList.innerHTML;
 };
-getPlans();
 
 const getGoal = () => {
   const elementsList = document.querySelector(".goal");
   return elementsList.outerHTML;
 };
-getGoal();
 
 export { getTitle, getDescription, getPlans, getGoal };
