@@ -10,8 +10,8 @@
 "use strict";
 
 const setButton = (buttonText) => {
-  const title = document.querySelector("body");
-  return (title.innerHTML = buttonText);
+  const body = document.querySelector("body");
+  return (body.innerHTML = buttonText);
 };
-setButton("<button>button text</button>");
+// setButton("<button>button text</button>");
 export { setButton };
