@@ -12,12 +12,12 @@
 const getSection = (num) => {
   //селектор по атрибуту через []
   const nums = document.querySelector(`span[data-number="${num}"]`);
-  console.log(nums);
+  // console.log(nums);
   let parent = nums.closest("div");
-  console.log(parent);
+  // console.log(parent);
   let attributes = parent.getAttribute("data-section");
-  console.log(attributes);
-  // return attributes;
+  // console.log(attributes);
+  return attributes;
 };
-getSection(4);
-// export { getSection };
+// getSection(4);
+export { getSection };
