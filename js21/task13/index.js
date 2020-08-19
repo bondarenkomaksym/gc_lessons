@@ -10,6 +10,7 @@
 "use strict";
 
 const getSection = (num) => {
+  //селектор по атрибуту через []
   const nums = document.querySelector(`span[data-number="${num}"]`);
   console.log(nums);
   let parent = nums.closest("div");
