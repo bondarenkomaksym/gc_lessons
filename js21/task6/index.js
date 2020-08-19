@@ -9,8 +9,9 @@
 
 "use strict";
 
-const setTitle = (text) => {
-  const title = document.querySelector(".title");
-  return (title.textContent = text);
+const setButton = (buttonText) => {
+  const title = document.querySelector("body");
+  return (title.innerHTML = buttonText);
 };
-export { setTitle };
+setButton("<button>button text</button>");
+export { setButton };
