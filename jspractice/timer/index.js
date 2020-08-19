@@ -5,7 +5,7 @@
 const timer = {
   secondsPassed: 0,
   minsPassed: 0,
-  timerId: 0, //переменная для хранения занчения из setInterval
+  timerId: null, //переменная для хранения занчения из setInterval
   // startTimer() {
   //   const adder = function () {
   //     this.secondsPassed += 1;
@@ -20,15 +20,16 @@ const timer = {
     this.timerId = setInterval(() => {
       console.log(this);
       this.secondsPassed += 1;
-      // if (this.secondsPassed === 60) {
-      //   this.minsPassed += 1;
-      //   this.secondsPassed = 0;
-      // }
+      if (this.secondsPassed === 10) {
+        this.minsPassed += 1;
+        this.secondsPassed = 0;
+      }
     }, 1000);
   },
 
   getTime() {},
   stopTimer() {
+    console.log("stop");
     clearInterval(this.timerId);
   },
   resetTimer() {
@@ -38,6 +39,7 @@ const timer = {
 };
 
 // timer.startTimer();
+// timer.stopTimer();
 
 // setTimeout(() => {
 //   console.log(" + 1 second");

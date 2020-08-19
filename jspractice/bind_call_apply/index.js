@@ -1,61 +1,29 @@
-//input: none
-//output: object
+//bind - input: obj, ....arg1....
+//bind - output: func
 
-// "use strict";
-const timer = {
-  secondsPassed: 0,
-  minsPassed: 0,
-  timerId: 0, //переменная для хранения занчения из setInterval
-  // startTimer() {
-  //   const adder = function () {
-  //     this.secondsPassed += 1;
-  //     console.log(this);
-  //   };
-  //   const adderBind = adder.bind(this); для закрепления контекста
-
-  //   setInterval(adderBind, 1000);
-  // },
-
-  startTimer() {
-    this.timerId = setInterval(() => {
-      console.log(this);
-      this.secondsPassed += 1;
-      // if (this.secondsPassed === 60) {
-      //   this.minsPassed += 1;
-      //   this.secondsPassed = 0;
-      // }
-    }, 1000);
-  },
-
-  getTime() {},
-  stopTimer() {
-    clearInterval(this.timerId);
-  },
-  resetTimer() {
-    this.secondsPassed = 0;
-    this.minsPassed = 0;
-  },
+"use strict";
+function printMessage(age, city) {
+  console.log(this);
+  console.log(
+    `Hello ${this.name}, email ${this.email},
+     age: ${age}, city: ${city}`
+  );
+}
+let user = {
+  name: "Alex",
+  email: "gmail.com",
 };
 
-// timer.startTimer();
+// const printMessageBind = printMessage.bind(user);
+// printMessageBind(25, "Hello");
 
-// setTimeout(() => {
-//   console.log(" + 1 second");
-// }, 1000);
+// const printMessageBind = printMessage.bind(user, 25, "Kyiv");
+// printMessageBind();
 
-// setInterval(() => {
-//   console.log(" + 1 second");
-// }, 1000);
+printMessage.bind(user, 25, "Kyiv")();
 
-//loose context example
-// const user = {
-//   name: "Tom",
-//   run() {
-//     console.log(this);
-//   },
-// };
-// user.run();
+//bind - input: func, obj, ....arg1....
+//bind - output: func
+const myBind = (func, context, ...args) => {};
 
-// const func = user.run;
-// console.log(func); //получаем только функцию run() без имени в объекте
-// func();
+// myBind(printMessage, user, 25, "Kyiv")();
