@@ -8,7 +8,7 @@
 //output:
 
 "use strict";
-//находим элементы
+// находим элементы
 const eventsListElem = document.querySelector(".events-list");
 const divElem = document.querySelector(".rect_div");
 const pElem = document.querySelector(".rect_p");
