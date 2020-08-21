@@ -8,9 +8,14 @@
 //output:
 
 "use strict";
-const inputPrompt = document.querySelector(".text-input");
-inputPrompt.value = input;
-const btnAlert = (input) => {
-  console.log(input);
-};
-inputPrompt.addEventListener("input", btnAlert);
+// const input = document.querySelector(".text-input");
+// const log = () => {
+//   console.log(input.value);
+// };
+// input.addEventListener("change", log);
+
+const input = document.querySelector(".text-input");
+
+input.addEventListener("change", () => {
+  console.log(input.value);
+});
