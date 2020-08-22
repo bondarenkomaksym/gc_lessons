@@ -10,6 +10,6 @@
 "use strict";
 const inputText = document.querySelector(".text-input");
 
-inputText.addEventListener("change", () => {
+inputText.addEventListener("change", (event) => {
   console.log(event.target.value);
 });
