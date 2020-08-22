@@ -16,7 +16,7 @@ const passErrorInput = document.querySelector(".error-text_password");
 
 const isRequired = (value) => (value ? undefined : "Required");
 const isValidEmail = (value) =>
-  value.includes("@") ? undefined : "Where a dog?";
+  value.includes("@") ? undefined : "Should be an email";
 
 const validatorsByField = {
   email: [isRequired, isValidEmail],
