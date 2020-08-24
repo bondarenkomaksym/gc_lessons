@@ -63,7 +63,8 @@ const elementStatus = (event) => {
     return;
   }
   const taskChecked = tasks.find(
-    (el) => el.id == event.target.closest(".list__item").dataset.id
+    //следить за типом данных при сравнении
+    (el) => el.id === Number(event.target.closest(".list__item").dataset.id)
   );
   taskChecked.done = event.target.checked;
   renderListItems(tasks);
