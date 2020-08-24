@@ -71,7 +71,6 @@ listElement.addEventListener("click", elementStatus);
 //добавляем новое задание после ввода в поле и нажатия на кнопку Create
 const addTask = () => {
   const inputEl = document.querySelector(".task-input");
-  // const newTextInput = inputEl.value;
   //если поле пустое - не добавляем задачу
   if (inputEl.value === "") return;
   tasks.push({
