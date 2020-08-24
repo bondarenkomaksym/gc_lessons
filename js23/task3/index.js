@@ -20,34 +20,35 @@ const tasks = [
 const listElement = document.querySelector(".list");
 
 const renderListItems = (listItems) => {
-  //перед добавлением задачи обновляем весь список
-  listElement.innerHTML = "";
-
   //через map, на каждой итерации создаём "li", назначаем класс и добавляем id
   const listItemsElems = listItems
     .sort((a, b) => a.done - b.done)
-    .map((task) => {
+    .map(({ id, text, done }) => {
       const listItemElem = document.createElement("li");
       listItemElem.classList.add("list__item");
-      //добавляем каждому элементу checkbox
-      const checkbox = document.createElement("input");
-      //каждому checkbox-элементу нужно задать тип атрибута "checkbox"
-      checkbox.setAttribute("type", "checkbox");
-      checkbox.setAttribute("data-id", task.id);
-      //checkbox-элемент должен считывать из tasks свойство done и установить значение черз свойство элемента "checked"
-      checkbox.checked = task.done;
-      //в checkbox назначаем класс
-      checkbox.classList.add("list__item-checkbox");
+      listItemElem.dataset.id = id;
       //если дело сделано, добавляем класс на элемент
-      if (task.done) {
+      if (done) {
         listItemElem.classList.add("list__item_done");
       }
 
+      //добавляем каждому элементу checkbox
+      const checkbox = document.createElement("input");
+      //в checkbox назначаем класс
+      checkbox.classList.add("list__item-checkbox");
+
+      //каждому checkbox-элементу нужно задать тип атрибута "checkbox"
+      checkbox.setAttribute("type", "checkbox");
+      // checkbox.dataset.id = id;
+      //checkbox-элемент должен считывать из tasks свойство done и установить значение черз свойство элемента "checked"
+      checkbox.checked = done;
+
       //в каждый сформированный элемент списка добавляем checkbox и текст
-      listItemElem.append(checkbox, task.text);
+      listItemElem.append(checkbox, text);
       return listItemElem;
     });
-
+  //перед добавлением задачи обновляем весь список
+  listElement.innerHTML = "";
   //массив созданных элементов вставляем в ".list"
   listElement.append(...listItemsElems);
 };
@@ -61,16 +62,18 @@ const elementStatus = (event) => {
   if (!checkboxChecked) {
     return;
   }
-  const taskChecked = tasks.find((el) => el.id === event.target.dataset.id);
-  console.log(taskChecked);
+  const taskChecked = tasks.find(
+    (el) => el.id == event.target.closest(".list__item").dataset.id
+  );
   taskChecked.done = event.target.checked;
   renderListItems(tasks);
 };
 listElement.addEventListener("click", elementStatus);
 
+const inputEl = document.querySelector(".task-input");
+const createButton = document.querySelector(".create-task-btn");
 //добавляем новое задание после ввода в поле и нажатия на кнопку Create
 const addTask = () => {
-  const inputEl = document.querySelector(".task-input");
   //если поле пустое - не добавляем задачу
   if (inputEl.value === "") return;
   tasks.push({
@@ -84,5 +87,4 @@ const addTask = () => {
   renderListItems(tasks);
 };
 
-const createButton = document.querySelector(".create-task-btn");
 createButton.addEventListener("click", addTask);
