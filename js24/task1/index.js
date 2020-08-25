@@ -8,15 +8,10 @@
 //output: string
 
 "use strict";
+const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-const dayOfWeek = (date, days) => {
-  const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+export const dayOfWeek = (date, days) => {
   const day = new Date(date).getDate();
-  const dateInFuture = new Date(date).setDate(day + days);
-
-  return weekDays[new Date(dateInFuture).getDay()];
+  const futureDay = new Date(date).setDate(day + days);
+  return weekDays[new Date(futureDay).getDay()];
 };
-dayOfWeek(new Date(2020, 0, 1), 14);
-// console.log(result);
-
-export { dayOfWeek };
