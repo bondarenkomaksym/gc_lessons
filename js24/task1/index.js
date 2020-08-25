@@ -18,6 +18,5 @@ const dayOfWeek = (date, days) => {
   return weekDays[new Date(dateInFutures).getDay()];
 };
 const result = dayOfWeek(new Date(2020, 0, 1), 14);
-console.log(result);
 
 export { dayOfWeek };
