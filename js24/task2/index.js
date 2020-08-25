@@ -14,6 +14,8 @@ const dateFormatter = new Intl.DateTimeFormat("en", {
   hour12: false,
 });
 //в функцию передаём new Date() = (date)
+
 const getGreenwichTime = (date) => dateFormatter.format(date);
 // console.log(getGreenwichTime(new Date()));
+
 export { getGreenwichTime };
