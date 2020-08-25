@@ -8,7 +8,7 @@
 //output: string
 
 "use strict";
-const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const weekDays = ["Su", "Mo", "Tu", "We", "Th", "Fr", "St"];
 
 const dayOfWeek = (date, days) => {
   const day = new Date(date).getDate();
