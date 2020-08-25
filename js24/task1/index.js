@@ -4,9 +4,20 @@
 // 3. Create prototype solution & testing - черновое решение
 // 4. Final testing & refactoring -> final solution
 
-//input:
-//output:
+//input: arr
+//output: string
 
 "use strict";
 
-const dayOfWeek = 
+const weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+const dayOfWeek = (date, days) => {
+  const day = new Date(date).getDate();
+  const dateInFutures = new Date(date).setDate(day + days);
+
+  return weekDays[new Date(dateInFutures).getDay()];
+};
+const result = dayOfWeek(new Date(2020, 0, 1), 14);
+console.log(result);
+
+export { dayOfWeek };
