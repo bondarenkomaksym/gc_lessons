@@ -13,7 +13,7 @@
 
 const getDiff = (dateStart, dateEnd) => {
   //переменная с первой итерацией
-  const difference = new Date(dateEnd) - new Date(dateStart);
+  const difference = new Date(dateStart) - new Date(dateEnd);
   //округление до дней, часов...
   const diffDay = Math.floor(difference / (1000 * 60 * 60 * 24));
   const diffHour = Math.floor((difference / 1000 / 60 / 60) % 24);
