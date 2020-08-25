@@ -26,7 +26,6 @@ const renderListItems = (listItems) => {
     .map(({ id, text, done }) => {
       const listItemElem = document.createElement("li");
       listItemElem.classList.add("list__item");
-      listItemElem.dataset.id = id;
       //если дело сделано, добавляем класс на элемент
       if (done) {
         listItemElem.classList.add("list__item_done");
@@ -39,7 +38,7 @@ const renderListItems = (listItems) => {
 
       //каждому checkbox-элементу нужно задать тип атрибута "checkbox"
       checkbox.setAttribute("type", "checkbox");
-      // checkbox.dataset.id = id;
+      checkbox.setAttribute("data-id", id);
       //checkbox-элемент должен считывать из tasks свойство done и установить значение черз свойство элемента "checked"
       checkbox.checked = done;
 
@@ -64,7 +63,7 @@ const elementStatus = (event) => {
   }
   const taskChecked = tasks.find(
     //следить за типом данных при сравнении
-    (el) => el.id === Number(event.target.closest(".list__item").dataset.id)
+    (el) => el.id === Number(event.target.dataset.id)
   );
   taskChecked.done = event.target.checked;
   renderListItems(tasks);
