@@ -9,7 +9,7 @@
 
 "use strict";
 
-localStorage.clear();
+// localStorage.clear();
 
 localStorage.setItem("hobbies", JSON.stringify({ name: "Bruce" }));
 localStorage.setItem("name", JSON.stringify("Bruce"));
