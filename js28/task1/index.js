@@ -22,7 +22,7 @@ const calc = (initialValue) => {
       result *= value;
       return this;
     },
-    substract(value) {
+    subtract(value) {
       result -= value;
       return this;
     },
