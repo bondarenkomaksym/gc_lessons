@@ -23,7 +23,7 @@
 //   ],
 // };
 
-export const markFavorites = (tree, favorites) => {
+const markFavorites = (tree, favorites) => {
   //проверяем наличие id в массиве
   const isFavorite = favorites.includes(tree.id);
   //возвращаем из метода новый узел с флагом favorite
@@ -37,3 +37,4 @@ export const markFavorites = (tree, favorites) => {
 };
 const result = markFavorites(tree, favorites);
 // console.log(result);
+export { markFavorites };
