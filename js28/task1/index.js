@@ -39,3 +39,4 @@ const calc = (initialValue) => {
 
 const result = calc(5).add(20).div(43).result();
 // console.log(result);
+export { calc };
