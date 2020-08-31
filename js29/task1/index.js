@@ -27,7 +27,7 @@ const addImage = (imgSrc, callback) => {
   imgElem.addEventListener("load", onImageLoaded);
 
   //сообщение об ошибке
-  imgElem.addEventListener("error", () => callback("Image load is failed..."));
+  imgElem.addEventListener("error", () => callback("Image load is failed"));
 
   // console.log({ width, height });
 };
@@ -48,9 +48,9 @@ const onImageLoaded = (error, data) => {
 };
 
 //test call
-addImage(
-  "https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg",
-  onImageLoaded
-);
+// addImage(
+//   "https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg",
+//   onImageLoaded
+// );
 //картинка загружается асинхронно!!!!
 export { addImage };
