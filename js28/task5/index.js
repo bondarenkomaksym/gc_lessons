@@ -27,12 +27,14 @@ const shmoment = (date) => {
   return {
     add(timeSlot, value) {
       // console.log("добавление", timeSlot, value);
+      // методу из funcs передаём параметр value
       funcs[timeSlot](value);
       // console.log(new Date(result.setFullYear(result.getFullYear() + value)));
       return this;
     },
     subtract(timeSlot, value) {
       // console.log("вычитание", timeSlot, value);
+
       funcs[timeSlot](-value);
       return this;
     },
