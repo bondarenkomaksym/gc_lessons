@@ -4,8 +4,8 @@
 // 3. Create prototype solution & testing - черновое решение
 // 4. Final testing & refactoring -> final solution
 
-//input:
-//output:
+//input: new Date & dates in methods
+//output: date
 
 "use strict";
 
@@ -49,4 +49,4 @@ const result = shmoment(new Date(2020, 7, 28, 15, 48, 10))
 
 console.log(result);
 
-// export { shmoment };
+export { shmoment };
