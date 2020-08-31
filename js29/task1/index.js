@@ -32,8 +32,8 @@ const addImage = (imgSrc, callback) => {
   // console.log({ width, height });
 };
 
-const imgSrc =
-  "https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg";
+// const imgSrc =
+//   "https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg";
 
 //callack example
 const onImageLoaded = (error, data) => {
@@ -48,6 +48,9 @@ const onImageLoaded = (error, data) => {
 };
 
 //test call
-addImage(imgSrc, onImageLoaded);
+addImage(
+  "https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg",
+  onImageLoaded
+);
 //картинка загружается асинхронно!!!!
 export { addImage };
