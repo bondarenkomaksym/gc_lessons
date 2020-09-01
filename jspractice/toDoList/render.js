@@ -1,5 +1,7 @@
 const listElem = document.querySelector(".list");
 export const renderList = (tasks) => {
+  listElem.innerHTML = "";
+
   const listItemsElem = tasks
     .sort((a, b) => sortTasks(a, b))
     .map((task) => createListElem(task));
@@ -10,10 +12,10 @@ const sortTasks = (a, b) => {
     return a.done - b.done;
   }
   if (a.done && b.done) {
-    return new Date(b.doneDate) - new Date(a.doneDate);
+    return b.doneDate - a.doneDate;
   }
   if (!a.done && !b.done) {
-    return new Date(b.createDate) - new Date(a.createDate);
+    return b.createDate - a.createDate;
   }
 };
 //input: object
@@ -21,10 +23,10 @@ const sortTasks = (a, b) => {
 const createListElem = ({ text, done, id }) => {
   const listItemElem = document.createElement("li");
   listItemElem.classList.add("list__item");
-  listItemElem.dataset.id = `${id}`;
   const checkboxItem = document.createElement("input");
   checkboxItem.setAttribute("type", "checkbox");
   checkboxItem.checked = done;
+  checkboxItem.dataset.id = id;
   if (done) {
     listItemElem.classList.add("list__item_done");
   }

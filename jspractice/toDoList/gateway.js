@@ -1,23 +1,27 @@
 import { tasks } from "./storage.js";
 import { renderList } from "./render.js";
 
-const listElem = document.querySelector(".list");
 const inputElem = document.querySelector(".task-input");
 
-export const checkthisDone = (event) => {
-  const checkedEl = event.target;
-  if (checkedEl.tagName !== "INPUT") return;
-  const getElId = tasks.find(
-    (elem) => elem.id === +checkedEl.parentElement.dataset.id
-  );
-  getElId.done = checkedEl.checked;
-  getElId.doneDate = new Date();
-  listElem.innerHTML = "";
+export const updateTask = (event) => {
+  // console.log(tasks);
+  const clicked = event.target;
+  if (clicked.tagName !== "INPUT") {
+    return;
+  }
+  // debugger;
+  const taskById = tasks.find((elem) => elem.id == clicked.dataset.id);
+  taskById.done = !taskById.done;
+  taskById.doneDate = taskById.done ? new Date() : null;
+  //проверяем даты выполнено/невыполнено в консоли
+  // console.log(tasks);
   renderList(tasks);
 };
 
-export const createTaskBoard = () => {
-  if (inputElem.value == "") return;
+export const createTask = () => {
+  if (inputElem.value == "") {
+    return;
+  }
   tasks.push({
     id: tasks.length + 1,
     text: inputElem.value,
@@ -26,6 +30,6 @@ export const createTaskBoard = () => {
     doneDate: null,
   });
   inputElem.value = "";
-  listElem.innerHTML = "";
+
   renderList(tasks);
 };
