@@ -8,10 +8,28 @@
 //output:
 
 "use strict";
-const b1 = document.querySelector(".b-1");
+// const b1 = document.querySelector(".b-1");
 
-b1.onclick = test;
+// b1.onclick = test;
 
-function test() {
-  this.style.background = "red";
-}
+// function test() {
+//   this.style.background = "red";
+// }
+
+let a = 7;
+
+// setTimeout(() => {
+//   a = 99;
+//   console.log(a);
+// }, 2000);
+
+console.log(a);
+
+let b = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve((a = 99));
+    // console.log(a);
+  }, 2000);
+});
+
+b.then(() => console.log(a));
