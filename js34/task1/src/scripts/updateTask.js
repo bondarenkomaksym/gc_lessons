@@ -2,6 +2,19 @@ import { renderTasks } from "./render.js";
 import { getItem, setItem } from "./storage.js";
 import { updateTask, getTasksList, deleteTask } from "./tasksGateway.js";
 
+//метод, который определяет в каком месте элемента list-item произошёл клик
+export const onListClick = (e) => {
+  const checkboxItem = e.target.classList.contains("list-item__checkbox");
+  const deleteItem = e.target.classList.contains("list-item__delete-btn");
+
+  if (deleteItem) {
+    onDeleteTask(e);
+  }
+  if (checkboxItem) {
+    onToggleTask(e);
+  }
+};
+
 export const onToggleTask = (e) => {
   const isCheckbox = e.target.classList.contains("list-item__checkbox");
 
@@ -54,16 +67,4 @@ export const onDeleteTask = (e) => {
       setItem("tasksList", newTasksList);
       renderTasks();
     });
-};
-
-export const onListClick = (e) => {
-  const checkboxItem = e.target.classList.contains("list-item__checkbox");
-  const deleteItem = e.target.classList.contains("list-item__delete-btn");
-
-  if (deleteItem) {
-    onDeleteTask(e);
-  }
-  if (checkboxItem) {
-    onToggleTask(e);
-  }
 };
