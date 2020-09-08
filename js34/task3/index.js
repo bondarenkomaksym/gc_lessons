@@ -41,10 +41,18 @@ const sendData = (event) => {
     headers: { "Content-type": "application/json" },
     body: JSON.stringify(userBody),
   })
-    .then((response) => console.log(response.json()))
+    .then((response) => response.json())
+    .then((data) => {
+      //очистка полей формы
+      loginForm.reset();
+      //вывод объекта в alert
+      alert(JSON.stringify(data));
+    })
     .catch(() => {
       errorField.textContent = "Failed to create user";
     });
 };
 
 loginForm.addEventListener("submit", sendData);
+
+// submitButton.addEventListener("click", () => loginForm.reset());
