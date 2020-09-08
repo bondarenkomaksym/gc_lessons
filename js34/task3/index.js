@@ -36,7 +36,7 @@ const sendData = (event) => {
   //данные формы конвертируем в объект
   const userBody = Object.fromEntries([...new FormData(loginForm)]);
 
-  const res = fetch(serverUrl, {
+  fetch(serverUrl, {
     method: "POST",
     headers: { "Content-type": "application/json" },
     body: JSON.stringify(userBody),
