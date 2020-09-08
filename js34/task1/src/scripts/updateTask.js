@@ -7,11 +7,11 @@ export const onListClick = (e) => {
   const checkboxItem = e.target.classList.contains("list-item__checkbox");
   const deleteItem = e.target.classList.contains("list-item__delete-btn");
 
-  if (deleteItem) {
-    onDeleteTask(e);
-  }
   if (checkboxItem) {
     onToggleTask(e);
+  }
+  if (deleteItem) {
+    onDeleteTask(e);
   }
 };
 
@@ -43,9 +43,9 @@ export const onToggleTask = (e) => {
 };
 
 export const onDeleteTask = (e) => {
-  const isDelete = e.target.classList.contains("list-item__delete-btn");
+  const deletedElem = e.target.classList.contains("list-item__delete-btn");
 
-  if (!isDelete) {
+  if (!deletedElem) {
     return;
   }
 
