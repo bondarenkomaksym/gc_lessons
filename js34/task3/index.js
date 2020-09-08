@@ -32,6 +32,7 @@ loginForm.addEventListener("input", formChanges);
 
 //отправка данных формы на сервер
 const sendData = (event) => {
+  //переопределяем стандартное поведение формы
   event.preventDefault();
   //данные формы конвертируем в объект
   const userBody = Object.fromEntries([...new FormData(loginForm)]);
