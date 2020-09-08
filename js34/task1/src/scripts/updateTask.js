@@ -50,18 +50,8 @@ export const onDeleteTask = (e) => {
   }
 
   const taskId = e.target.dataset.id;
-  const tasksList = getItem("tasksList");
-  const { text, createDate } = tasksList.find((task) => task.id === taskId);
-  const done = e.target.checked;
 
-  const updatedTask = {
-    text,
-    createDate,
-    done,
-    endEvent: done ? new Date().toISOString() : null,
-  };
-
-  deleteTask(taskId, updatedTask)
+  deleteTask(taskId)
     .then(() => getTasksList())
     .then((newTasksList) => {
       setItem("tasksList", newTasksList);
