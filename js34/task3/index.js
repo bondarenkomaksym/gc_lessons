@@ -39,7 +39,7 @@ const sendData = (event) => {
 
   fetch(serverUrl, {
     method: "POST",
-    headers: { "Content-type": "application/json" },
+    headers: { "Content-type": "application/json;charset=utf-8" },
     body: JSON.stringify(userBody),
   })
     .then((response) => response.json())
