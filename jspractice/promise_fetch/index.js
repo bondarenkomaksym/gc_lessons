@@ -8,7 +8,7 @@
 //
 "use strict";
 
-const serverUrl = "https://5e5cf5eb97d2ea0014796f01.mockapi.io/api/v1/users";
+const serverUrl = "https://5f577f7f1a07d600167e6e96.mockapi.io/users";
 
 const user = {
   email: "MB@example.com",
@@ -23,10 +23,26 @@ const res = fetch(serverUrl, {
   headers: { "Content-type": "application/json" },
   body: JSON.stringify(user),
 })
-  .then((response) => console.log(response.json()))
+  //.json()
+  //input: none
+  //output: Promise
+  .then((response) => {
+    if (response.ok) {
+      return response.json();
+    }
+    if (response.status === 400) {
+      throw new Error("data is not valid");
+    }
+    if (response.status === 500) {
+      throw new Error("try again later");
+    }
+  })
   .then((userBody) => {
     console.log(userBody);
     // alert(JSON.stringify(userBody));
+  })
+  .catch((error) => {
+    console.log(error);
   });
 // .then((response) => {
 //   debugger;
