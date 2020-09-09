@@ -9,49 +9,47 @@
 
 "use strict";
 
-const baseUrl = "https://5f56011532f56200168bccc5.mockapi.io/api/v1/users";
+//в случае потенциально опасного кода, код помещаем в конструкцию try/catch
+//если ошибки не будет, то код выполниться как обычно
+//в блоке finaly можно выполнить доп действия
 
-// const newUser = {
-//   email: "aaaaaaaa@gmail.com",
-//   name: "Max",
-//   city: "Kyiv",
-// };
+// try {
+//   const jsonString = '{"name":"John"}';
+//   const userData = JSON.parse(jsonString);
+//   console.log(userData);
+// } catch (err) {
+//   console.error(err.name);
+// } finally {
+//   console.log("some script");
+// }
 
-/* getUsersList code here */
-export const getUsersList = () =>
-  fetch(baseUrl).then((response) => response.json());
-// console.log(getUsersList());
+// console.log("I am alive!");
 
-/* getUserById code here */
-export const getUserById = (userId) =>
-  fetch(`${baseUrl}/${userId}`).then((response) => response.json());
-// console.log(getUserById(2));
+window.addEventListener("error", function onUnhandledError(err) {
+  console.error("error", err.message);
+});
 
-/* createUser code here */
-export const createUser = (user) =>
-  fetch(baseUrl, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json;charser= utf-8",
-    },
-    body: JSON.stringify(user),
-  });
-// console.log(createUser(newUser));
+let userParsingResult;
 
-/* updateUser code here */
-export const updateUser = (id, updatedUserData) =>
-  fetch(`${baseUrl}/${id}`, {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json;charser= utf-8",
-    },
-    body: JSON.stringify(updatedUserData),
-  });
-// console.log(updateUser(3, newUser));
+try {
+  //с помощью JSON.parse конвертируем строку в объект
+  const user = JSON.parse('{"name":"John"}');
+  console.log("User data: ", user);
+  userParsingResult = "success";
+} catch (e) {
+  userParsingResult = "error";
+} finally {
+  console.log(`User parsing finished with ${userParsingResult}`);
+}
 
-/* deleteUser code here */
-export const deleteUser = (id) =>
-  fetch(`${baseUrl}/${id}`, {
-    method: "DELETE",
-  });
-// console.log(deleteUser(3));
+let productParsingResult;
+
+try {
+  const product = JSON.parse('{"name":"John"');
+  console.log("Product data: ", product);
+  productParsingResult = "success";
+} catch (e) {
+  productParsingResult = "error";
+} finally {
+  console.log(`Product parsing finished with ${productParsingResult}`);
+}
