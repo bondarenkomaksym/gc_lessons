@@ -34,11 +34,11 @@
 
 // b.then(() => console.log(a));
 
-const nonconsecutive = (arr) => {
-  let result = arr.find((number, index) => number !== index + arr[0]);
-  return Number.isInteger(result) ? result : null;
-};
-console.log(nonconsecutive([1, 2, 3, 4, 6, 7, 8]));
+// const nonconsecutive = (arr) => {
+//   let result = arr.find((number, index) => number !== index + arr[0]);
+//   return Number.isInteger(result) ? result : null;
+// };
+// console.log(nonconsecutive([1, 2, 3, 4, 6, 7, 8]));
 
 // function firstNonConsecutive(arr) {
 //   for (let i = 0; i < arr.length; i++) {
@@ -49,3 +49,13 @@ console.log(nonconsecutive([1, 2, 3, 4, 6, 7, 8]));
 //   return null;
 // }
 // console.log(firstNonConsecutive([1, 2, 3, 4, 5, 6, 7, 9]));
+
+function sum() {
+  let result = 0;
+  for (let i = 0; i < 700; i++) {
+    result += 1;
+    if (result > 50) throw new Error("aaaaaaaaaaaaa");
+  }
+  return result;
+}
+console.log(sum());
