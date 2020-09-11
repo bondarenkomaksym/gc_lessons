@@ -44,12 +44,12 @@ export const getUsersBlogs = async (usersBlogs) => {
     );
 
     const userData = Promise.all(getUsersData);
-
     return userData;
   } catch (error) {
     throw new Error(error);
   }
 };
+
 getUsersBlogs(["google", "facebook", "gaearon"]).then((linksList) =>
   console.log(linksList)
 );
