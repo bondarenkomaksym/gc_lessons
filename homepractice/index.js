@@ -50,12 +50,24 @@
 // }
 // console.log(firstNonConsecutive([1, 2, 3, 4, 5, 6, 7, 9]));
 
-function sum() {
-  let result = 0;
-  for (let i = 0; i < 700; i++) {
-    result += 1;
-    if (result > 50) throw new Error("aaaaaaaaaaaaa");
-  }
-  return result;
-}
-console.log(sum());
+// function sum() {
+//   let result = 0;
+//   for (let i = 0; i < 700; i++) {
+//     result += 1;
+//     if (result > 50) throw new Error("aaaaaaaaaaaaa");
+//   }
+//   return result;
+// }
+// console.log(sum());
+
+// let arr = [1, 10, 3, 7, 56];
+// const result = arr.map(() => {});
+// console.log(result); //массив с undef элементами
+
+// const result = (() => {}) === (() => {});
+// console.log(result); //false потому что две разные функции
+
+// const obj = {
+//   name: "Tom",
+// };
+// console.log(obj);
