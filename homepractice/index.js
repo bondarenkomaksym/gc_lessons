@@ -71,3 +71,26 @@
 //   name: "Tom",
 // };
 // console.log(obj);
+
+//fizzbuzz ++++++++++++++++++++++++++++++++
+
+// for (let i = 1; i < 100; i++) {
+//   let arr = [];
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log("fizzbuzz");
+//   } else if (i % 3 === 0) {
+//     console.log("fizz");
+//   } else if (i % 5 === 0) {
+//     console.log("buzz");
+//   } else {
+//     console.log(i);
+//   }
+// }
+
+const generator = (n, w) => (num) => (num % n === 0 ? w : "");
+const fizz = generator(3, "fizz");
+const buzz = generator(5, "buzz");
+
+[...Array(20).keys()]
+  .map((i) => i + 1)
+  .forEach((i) => console.log(fizz(i) + buzz(i) || i));
