@@ -48,7 +48,7 @@
 //   }
 //   return null;
 // }
-// console.log(firstNonConsecutive([1, 2, 3, 4, 5, 6, 7, 9]));
+// console.log(firstNonConsecutive([1, 2, 3, 5]));
 
 // function sum() {
 //   let result = 0;
@@ -87,10 +87,39 @@
 //   }
 // }
 
-const generator = (n, w) => (num) => (num % n === 0 ? w : "");
-const fizz = generator(3, "fizz");
-const buzz = generator(5, "buzz");
+// const generator = (n, w) => (num) => (num % n === 0 ? w : "");
+// const fizz = generator(3, "fizz");
+// const buzz = generator(5, "buzz");
 
-[...Array(20).keys()]
-  .map((i) => i + 1)
-  .forEach((i) => console.log(fizz(i) + buzz(i) || i));
+// [...Array(20).keys()]
+//   .map((i) => i + 1)
+//   .forEach((i) => console.log(fizz(i) + buzz(i) || i));
+
+// let arr = ["a", "b", "c"];
+
+// const result = (arr) =>
+//   arr.map((el, index) => {
+//     return `${index + 1}: ${el}`;
+//   });
+
+// console.log(result(arr));
+
+// function firstNonConsecutive(ids) {
+//   for (let i = 0; i < ids.length; i++) {
+//     if (ids.indexOf(i) === -1) {
+//       return i;
+//     }
+//   }
+//   return ids.length;
+// }
+// console.log(firstNonConsecutive([1, 2, 3, 5]));
+
+function nextId(ids) {
+  for (let i = 0; i < ids.length; i++) {
+    if (ids.indexOf(i) === -1) {
+      return i;
+    }
+  }
+  return ids.length;
+}
+console.log(nextId([0, 1, 2, 3, 5]));
