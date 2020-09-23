@@ -124,3 +124,35 @@
 // }
 // console.log(nextId([0, 1, 2, 3, 5]));
 
+
+//через округление верх
+const quarterOf = month => {
+  return Math.ceil(month / 3)
+}
+console.log(quarterOf(11));
+
+//через if 
+// let year = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+// const array = Array.from({ length: 12 }, (v, k) => k + 1);
+// console.log(array);
+
+const quarter = month => {
+  if (month >= 1 && month <= 3) {
+    return 1;
+  } else if (month >= 4 && month <= 6) {
+    return 2;
+  } else if (month >= 7 && month <= 9) {
+    return 3;
+  } else if (month >= 10 && month <= 12) {
+    return 4;
+  }
+
+}
+console.log(quarter(6));
+
+
+const quarterOf2 = (month) => {
+  return month % 3 === 0 ? month / 3 : Math.floor(month / 3) + 1;
+}
+console.log(quarterOf2(11));
