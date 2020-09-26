@@ -132,7 +132,7 @@
 // console.log(quarterOf(11));
 
 //через if 
-let arr = [1, 2, 3, 4, 5];
+// let arr = [1, 2, 3, 4, 5];
 
 // const array = Array.from({ length: 12 }, (v, k) => k + 1);
 // console.log(array);
