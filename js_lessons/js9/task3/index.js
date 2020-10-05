@@ -26,10 +26,15 @@ const rooms = {
 
 function getPeople(obj) {
   if (Object.keys(obj).length === 0) return [];
-  const people = Object.values(obj)
-    .reduce((acc, val) => acc.concat(val))
+  const people = Object.values(obj);
+  console.log(people);
+  const second = people
+    .reduce((acc, val) => acc.concat(val));
+  console.log(second);
+  //преобразовываем каждый элемент в строку со значением из свойства name 
+  const third = second
     .map((el) => el.name);
-  return people;
+  return third;
 }
 
 console.log(getPeople(rooms));
