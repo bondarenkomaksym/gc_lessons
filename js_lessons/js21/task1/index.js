@@ -9,7 +9,7 @@
 
 "use strict";
 const tasks = [
-  { text: "Buy milk", done: false },
+  { text: "Buy milk", done: true },
   { text: "Pick up Tom from airport", done: false },
   { text: "Visit party", done: false },
   { text: "Visit doctor", done: true },
@@ -17,18 +17,20 @@ const tasks = [
 ];
 
 const renderListItems = (listItems) => {
+  //находим корневой элемент
   const listElement = document.querySelector(".list");
-
+  //функция сортирует и отрисовывает элем-ты списка, добавляет им класс
   const listItemsElems = listItems
     .sort((a, b) => a.done - b.done)
     .map(({ text, done }) => {
+      //создаём элемент списка в виде "li"
       const listItemElem = document.createElement("li");
       listItemElem.classList.add("list__item");
 
       if (done) {
         listItemElem.classList.add("list__item_done");
       }
-
+      //добавляем чекбокс в виде инпута
       const checkbox = document.createElement("input");
       checkbox.setAttribute("type", "checkbox");
       checkbox.checked = done;
@@ -39,4 +41,5 @@ const renderListItems = (listItems) => {
     });
   listElement.append(...listItemsElems);
 };
+
 renderListItems(tasks);
