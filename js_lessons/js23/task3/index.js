@@ -53,7 +53,7 @@ const renderListItems = (listItems) => {
 };
 renderListItems(tasks);
 
-//при клике на checkbox изменить состояние элемента
+//при клике на checkbox изменить состояние элемента (его свойство done в объекте)
 const elementStatus = (event) => {
   const checkboxChecked = event.target.classList.contains(
     "list__item-checkbox"
@@ -62,9 +62,9 @@ const elementStatus = (event) => {
     return;
   }
   const taskChecked = tasks.find(
-    //следить за типом данных при сравнении
     (el) => el.id === Number(event.target.dataset.id)
   );
+  // debugger;
   taskChecked.done = event.target.checked;
   renderListItems(tasks);
 };
