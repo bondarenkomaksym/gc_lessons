@@ -20,13 +20,11 @@ const generateNumbersRange = (from, to) => {
 
 const getLineSeats = () => {
   return generateNumbersRange(1, 10)
-    .map(
-      (seatNumber) => `
-    <div 
+    .map((seatNumber) =>
+      `<div 
       class="sector__seat" 
       data-seat-number="${seatNumber}"
-    ></div>
-  `
+    ></div>`
     )
     .join("");
 };
@@ -34,13 +32,11 @@ const getLineSeats = () => {
 const getSectorLines = () => {
   const seatsString = getLineSeats();
   return generateNumbersRange(1, 10)
-    .map(
-      (lineNumber) => `
-    <div 
+    .map((lineNumber) =>
+      `<div 
       class="sector__line" 
       data-line-number="${lineNumber}"
-    >${seatsString}</div>
-  `
+    >${seatsString}</div>`
     )
     .join("");
 };
@@ -51,13 +47,11 @@ const renderArena = () => {
   const linesString = getSectorLines();
 
   const sectorsString = generateNumbersRange(1, 3)
-    .map(
-      (sectorNumber) => `
-    <div 
+    .map((sectorNumber) =>
+      `<div 
       class="sector" 
       data-sector-number="${sectorNumber}"
-    >${linesString}</div>
-    `
+    >${linesString}</div>`
     )
     .join("");
 
