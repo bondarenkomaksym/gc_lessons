@@ -40,7 +40,7 @@ const renderListItems = (listItems) => {
       //каждому checkbox-элементу нужно задать тип атрибута "checkbox"
       checkbox.setAttribute("type", "checkbox");
       checkbox.setAttribute("data-id", id);
-      //checkbox-элемент должен считывать из tasks свойство done и установить значение черз свойство элемента "checked"
+      //checkbox-элемент должен считывать из tasks свойство done и установить значение через свойство элемента "checked"
       checkbox.checked = done;
 
       //в каждый сформированный элемент списка добавляем checkbox и текст
@@ -80,7 +80,7 @@ const addTask = () => {
     text: inputEl.value,
     done: false,
   });
-  //в консоли поставить дебаггер и проверить добавление нового элемента в массив tasks
+
   inputEl.value = "";
   renderListItems(tasks);
 };

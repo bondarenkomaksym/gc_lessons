@@ -213,6 +213,35 @@ var a = 10;
 //   throw new Error("Unable to copy obj as type isn't supported " + obj.constructor.name);
 // }
 
-console.log([...Array(10).keys()]
-  .map(el => el + 1).filter(el => el % 3 === 0));
-console.log(Math.ceil(10 / 3));
+// console.log([...Array(10).keys()]
+//   .map(el => el + 1).filter(el => el % 3 === 0));
+
+// console.log(Math.ceil(10 / 3));
+
+// function isPalindrom(string) {
+//   let copyreverse = string.split('').reverse().join('');
+
+//   if (string === copyreverse) {
+//     console.log('palindrome');
+//   } else {
+//     console.log('not');
+//   }
+// };
+// isPalindrom('456654');
+// isPalindrom('45665');
+
+// function isPalindrom(string) {
+//   let characters = string.split('');
+//   let isPalindrom = true;
+
+//   for (let i = 0; i < characters.length; i++) {
+//     const element = characters[i];
+
+//     if (element !== characters[characters.length - 1 - i]) {
+//       isPalindrom = false;
+//     }
+//   }
+//   return isPalindrom;
+// };
+
+// console.log(isPalindrom('45664'));
